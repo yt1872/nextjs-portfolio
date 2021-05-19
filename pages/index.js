@@ -11,7 +11,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <h1>Yuichiro</h1>
     </div>
   );
 }

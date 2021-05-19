@@ -1,8 +1,18 @@
 module.exports = {
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  darkMode: "media",
+  mode: "jit",
+  purge: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./public/**/*.html",
+    "./src/**/*.{js,jsx,ts,tsx,vue}",
+  ],
+  darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ['"Poppins"', "sans-serif"],
+      },
+    },
   },
   variants: {
     extend: {},
