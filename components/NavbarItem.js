@@ -1,8 +1,17 @@
-function NavbarItem({ navLink }) {
+import { Link } from "react-scroll";
+
+function NavbarItem({ navLinkName, navLinkPath }) {
   return (
-    <div className="m-5 sm:my-0 cursor-pointer">
-      <a className="font-normal">{navLink}</a>
-    </div>
+    <li>
+      <Link
+        to={navLinkPath}
+        className="hover:bg-gray-400 dark:hover:bg-gray-600 table w-full rounded-md tracking-wider sm:px-4 py-5 sm:py-1"
+        spy={true}
+        smooth={true}
+      >
+        {navLinkName}
+      </Link>
+    </li>
   );
 }
 

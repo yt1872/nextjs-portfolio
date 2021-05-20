@@ -8,8 +8,8 @@ function Navbar() {
 
   const handleClick = () => setClick(!click);
   return (
-    <div className="flex justify-between m-5 items-center font-bold tracking-wider">
-      <div className="flex flex-col text-center font-normal text-sm">
+    <div className="flex justify-between p-5 w-screen fixed items-center tracking-wider">
+      <div className="flex flex-col text-center text-sm cursor-pointer">
         <p>YUICHIRO</p>
         <p>TOYAMA</p>
       </div>
@@ -24,29 +24,33 @@ function Navbar() {
         <div
           className={
             click
-              ? "absolute top-20 left-0 w-full text-center sm:hidden"
-              : "hidden sm:hidden"
+              ? "absolute sm:static top-20 left-0 w-full sm:w-full h-screen sm:h-full text-center px-5"
+              : "hidden sm:block"
           }
         >
-          <NavbarItem navLink="HOME" />
-          <NavbarItem navLink="ABOUT" />
-          <NavbarItem navLink="WORKS" />
-          <NavbarItem navLink="CONTACT" />
-          <div className="flex justify-center">
-            <SunIcon className="h-6" />
-            <div className="mx-2">
-              <Toggle />
-            </div>
-            <MoonIcon className="h-6" />
-          </div>
+          <ul className="sm:inline-flex items-center w-full">
+            <NavbarItem navLinkName="HOME" />
+            <NavbarItem navLinkName="ABOUT" />
+            <NavbarItem navLinkName="WORKS" />
+            <NavbarItem navLinkName="CONTACT" />
+            <li>
+              <div className="flex justify-center mt-5 sm:m-0 items-center">
+                <SunIcon className="h-5" />
+                <div className="mx-2 items-center">
+                  <Toggle />
+                </div>
+                <MoonIcon className="h-5" />
+              </div>
+            </li>
+          </ul>
         </div>
 
-        <div className="hidden sm:inline-flex">
+        {/* <div className="hidden sm:inline-flex">
           <NavbarItem navLink="HOME" />
           <NavbarItem navLink="ABOUT" />
           <NavbarItem navLink="WORKS" />
           <NavbarItem navLink="CONTACT" />
-        </div>
+        </div> */}
       </nav>
     </div>
   );

@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
   mode: "jit",
   purge: [
@@ -9,6 +11,12 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        primary: "#0e61fe",
+        secondary: "#cfe1ff",
+        accent: "#f5f8ff",
+        darkbackground: "#121212",
+      },
       fontFamily: {
         poppins: ['"Poppins"', "sans-serif"],
       },
