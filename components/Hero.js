@@ -2,28 +2,33 @@ import Programmer from "./Programmer";
 
 function Hero() {
   return (
-    <div className="text-gray-900 dark:text-gray-100 flex flex-col sm:flex-row sm:items-center h-screen justify-evenly mx-5 text-2xl font-medium tracking-wider">
-      <div className="mt-20">
-        <div className="mb-2">Hi &#x1f44b;,</div>
-        <div className="mb-2">I'm Yuichiro Toyama.</div>
-        <div className="mb-2">
-          A{" "}
-          <i className="text-primary font-semibold not-italic">
-            Fullstack Developer&nbsp;
-          </i>
-          based in Tokyo.
+    <div
+      id="home"
+      className="text-gray-900 dark:text-gray-100 flex flex-col sm:flex-row sm:items-center md:justify-evenly h-screen justify-center mx-5 text-2xl leading-9 sm:text-2xl md:text-3xl font-medium tracking-wider"
+    >
+      <div className="">
+        <div className="mb-2 font-medium">Hi &#x1f44b;,</div>
+        <div className="mb-2 font-medium">I'm Yuichiro Toyama.</div>
+        <div className="font-medium">
+          A&nbsp;
+          <mark className="font-semibold not-italic bg-secondary px-2 py-1 rounded-md">
+            Fullstack Developer
+          </mark>
+          &nbsp; based in Tokyo.
         </div>
-        <div className="text-base mb-5 text-gray-400 tracking-wide">
+        <div className="text-sm py-5 text-gray-400 tracking-wide">
           I design and build{" "}
-          <i className="text-primary font-semibold not-italic">interactive</i>{" "}
-          and{" "}
-          <i className="text-primary font-semibold not-italic">responsive</i>{" "}
-          websites.
+          <mark className="font-semibold not-italic">interactive</mark> and{" "}
+          <mark className="font-semibold not-italic">responsive</mark> websites.
         </div>
-        <a className="primary-btn">GET IN TOUCH</a>
+        <div className="flex">
+          <a className="primary-btn">GET IN TOUCH</a>
+        </div>
       </div>
-      <div className="w-8/12 m-auto">
-        <Programmer />
+      <div>
+        <div className="w-8/12 m-auto md:w-1/3">
+          <Programmer />
+        </div>
       </div>
     </div>
   );

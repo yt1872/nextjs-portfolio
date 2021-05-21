@@ -1,14 +1,14 @@
 function About() {
   return (
-    <div className="mx-5 md:px-10 md:m-0">
+    <div className="mx-5 pt-16 md:px-10 md:m-0" id="about">
       <div className="flex flex-col md:flex-row w-full">
         <div className="pt-3 md:w-1/3 md:text-right md:mr-5">
-          <h1>A LITTLE ABOUT ME</h1>
+          <h1>A LITTLE BIT ABOUT ME</h1>
         </div>
         <div className="text-sm py-3 md:w-1/2">
           <p>
             A <mark>bilingual</mark> web developer with an aerospace engineering
-            degree now working as a full stack developer for a japanese system
+            degree now working as a full stack developer for a Japanese system
             integration company. Born and raised in the <mark>U.K.</mark> now
             living in <mark>Tokyo</mark>.
             <br />
@@ -31,12 +31,12 @@ function About() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row w-full">
+      <div className="flex flex-col md:flex-row w-full mt-10">
         <div className="pt-3 md:w-1/3 md:text-right md:mr-5">
           <h1>SOME OF MY SKILLS</h1>
         </div>
         <div className="text-sm py-3 md:w-1/2">
-          <div className="flex justify-between">
+          <div className="flex justify-evenly">
             <div className="">
               <h3>FRONTEND</h3>
               <div className="py-1">

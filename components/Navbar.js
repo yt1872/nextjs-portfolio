@@ -7,9 +7,11 @@ function Navbar() {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
   return (
-    <div className="flex justify-between p-5 w-screen fixed items-center tracking-wider">
-      <div className="flex flex-col text-center text-sm cursor-pointer">
+    <div className="flex justify-between p-5 w-screen fixed items-center tracking-wider z-10">
+      <div className="flex flex-col text-center text-xs cursor-pointer">
         <p>YUICHIRO</p>
         <p>TOYAMA</p>
       </div>
@@ -24,15 +26,31 @@ function Navbar() {
         <div
           className={
             click
-              ? "absolute sm:static top-20 left-0 w-full sm:w-full h-screen sm:h-full text-center px-5"
+              ? "absolute sm:static top-16 left-0 w-full sm:w-full h-screen sm:h-full text-center px-5"
               : "hidden sm:block"
           }
         >
           <ul className="sm:inline-flex items-center w-full">
-            <NavbarItem navLinkName="HOME" />
-            <NavbarItem navLinkName="ABOUT" />
-            <NavbarItem navLinkName="WORKS" />
-            <NavbarItem navLinkName="CONTACT" />
+            <NavbarItem
+              navLinkName="HOME"
+              navLinkPath="home"
+              closeMobileMenu={closeMobileMenu}
+            />
+            <NavbarItem
+              navLinkName="ABOUT"
+              navLinkPath="about"
+              closeMobileMenu={closeMobileMenu}
+            />
+            <NavbarItem
+              navLinkName="WORKS"
+              navLinkPath="works"
+              closeMobileMenu={closeMobileMenu}
+            />
+            <NavbarItem
+              navLinkName="CONTACT"
+              navLinkPath="contact"
+              closeMobileMenu={closeMobileMenu}
+            />
             <li>
               <div className="flex justify-center mt-5 sm:m-0 items-center">
                 <SunIcon className="h-5" />
