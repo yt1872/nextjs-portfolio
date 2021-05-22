@@ -7,7 +7,7 @@ function ProjectsSection({ projectName, projectDesc, stack, image }) {
     itemsToRender = stack.map((item) => {
       return (
         <p
-          className="border text-sm border-primary rounded-md py-1 px-2 mr-2"
+          className="border text-xs border-primary rounded-md p-1 mr-2 mb-1"
           key={item}
         >
           {item}
@@ -27,8 +27,8 @@ function ProjectsSection({ projectName, projectDesc, stack, image }) {
       <div className="py-2">
         <h2>{projectName}</h2>
       </div>
-      <div className="text-sm">{projectDesc}</div>
-      <div className="flex mt-3">{itemsToRender}</div>
+      <div className="text-sm leading-6">{projectDesc}</div>
+      <div className="flex mt-3 flex-wrap">{itemsToRender}</div>
     </div>
   );
 }

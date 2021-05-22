@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { IconContext } from "react-icons";
 
 function Footer() {
   return (
@@ -8,10 +9,15 @@ function Footer() {
         <div>Yuichiro Toyama</div>
       </div>
       <div class="flex text-xl">
-        <a href="#" className="mr-3 cursor-pointer hover:text-primary">
-          <FaGithub />
+        <a href="https://github.com/yt1872" className="mr-3 cursor-pointer">
+          <div>
+            <FaGithub />
+          </div>
         </a>
-        <a href="#">
+        <a
+          href="https://www.linkedin.com/in/yt1872/"
+          className="visited:text-red-600"
+        >
           <FaLinkedin />
         </a>
       </div>

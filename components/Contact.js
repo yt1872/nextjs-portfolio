@@ -1,56 +1,18 @@
-import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& > *": {
-      margin: theme.spacing(1),
-      width: "25ch",
-    },
-    textField: {
-      border: "1px solid yellow",
-    },
-  },
-}));
+import TextField from "./TextField";
 
 function Contact() {
-  const classes = useStyles();
-
   return (
-    <div id="contact" className="mx-5 flex flex-col">
+    <div id="contact" className="mx-5 flex flex-col md:flex-row">
       <div className="pt-3 md:w-1/3 md:text-right md:mr-5">
         <h1>CONTACT ME</h1>
       </div>
-      <div className="my-3 h-80 text-sm">
+      <div className="text-sm py-3 md:w-1/2">
         <form>
-          <div className="my-3">
-            <TextField
-              id="outlined-basic"
-              label="Your Name"
-              variant="outlined"
-              className="w-full"
-              size="small"
-            />
-          </div>
-          <div className="my-3">
-            <TextField
-              id="outlined-basic"
-              label="E-mail"
-              variant="outlined"
-              className="w-full"
-              size="small"
-            />
-          </div>
-          <div className="my-3">
-            <TextField
-              id="outlined-basic"
-              label="Message"
-              variant="outlined"
-              className="w-full"
-              size="small"
-              multiline
-              rows={5}
-            />
+          <TextField placeholder="Your Name" rows="1" />
+          <TextField placeholder="E-Mail" rows="1" />
+          <TextField placeholder="Message" rows="5" />
+          <div className="flex justify-center">
+            <a className="primary-btn w-full text-center">SUBMIT</a>
           </div>
         </form>
       </div>

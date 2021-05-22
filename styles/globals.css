@@ -15,7 +15,7 @@
   }
 
   h1 {
-    @apply text-base font-semibold tracking-wider text-primary dark:text-primary;
+    @apply text-base font-medium tracking-wider text-primary dark:text-primary;
   }
 
   h2 {
@@ -27,7 +27,7 @@
   }
 
   .primary-btn {
-    @apply cursor-pointer bg-blue-600 hover:bg-blue-500 text-blue-100 text-sm px-4 py-3 rounded-md;
+    @apply cursor-pointer bg-blue-600 hover:bg-blue-500 text-blue-100 text-sm px-4 py-3 rounded-md tracking-wider;
   }
 }
 

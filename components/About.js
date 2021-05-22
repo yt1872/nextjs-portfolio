@@ -1,3 +1,5 @@
+// import Resume from "../public/resume.pdf";
+
 function About() {
   return (
     <div className="mx-5 pt-16 md:px-10 md:m-0" id="about">
@@ -5,7 +7,7 @@ function About() {
         <div className="pt-3 md:w-1/3 md:text-right md:mr-5">
           <h1>A LITTLE BIT ABOUT ME</h1>
         </div>
-        <div className="text-sm py-3 md:w-1/2">
+        <div className="text-sm py-3 md:w-1/2 leading-6">
           <p>
             A <mark>bilingual</mark> web developer with an aerospace engineering
             degree now working as a full stack developer for a Japanese system
@@ -36,7 +38,7 @@ function About() {
           <h1>SOME OF MY SKILLS</h1>
         </div>
         <div className="text-sm py-3 md:w-1/2">
-          <div className="flex justify-evenly">
+          <div className="flex justify-evenly leading-6">
             <div className="">
               <h3>FRONTEND</h3>
               <div className="py-1">
@@ -76,7 +78,7 @@ function About() {
         </div>
       </div>
       <div className="pt-5 justify-center flex">
-        <a download="Resume.pdf" className="primary-btn">
+        <a href="/resume.pdf" download="Resume.pdf" className="primary-btn">
           DOWNLOAD RESUME
         </a>
       </div>

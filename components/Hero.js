@@ -1,4 +1,5 @@
 import Programmer from "./Programmer";
+import { Link } from "react-scroll";
 
 function Hero() {
   return (
@@ -22,7 +23,12 @@ function Hero() {
           <mark className="font-semibold not-italic">responsive</mark> websites.
         </div>
         <div className="flex">
-          <a className="primary-btn">GET IN TOUCH</a>
+          <Link to="contact" className="primary-btn" spy={true} smooth={true}>
+            GET IN TOUCH
+          </Link>
+          {/* <a className="primary-btn" href="#contact">
+            GET IN TOUCH
+          </a> */}
         </div>
       </div>
       <div>

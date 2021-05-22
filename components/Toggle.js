@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Switch } from "@headlessui/react";
 
 function Toggle() {
-  const [enabled, setEnabled] = useState(false);
+  const [enabled, setEnabled] = useState(true);
 
   if (process.browser) {
     if (enabled) {
@@ -18,7 +18,7 @@ function Toggle() {
       onChange={setEnabled}
       className={`${
         enabled ? "bg-blue-400" : "bg-gray-400"
-      } relative inline-flex items-center h-6 rounded-full w-11`}
+      } relative inline-flex items-center h-6 rounded-full w-11 focus:outline-none`}
     >
       <span className="sr-only">Enable notifications</span>
       <span
