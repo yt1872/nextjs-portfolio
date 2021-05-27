@@ -1,5 +1,5 @@
 import NavbarItem from "./NavbarItem";
-import { MenuIcon, XIcon, SunIcon, MoonIcon } from "@heroicons/react/solid";
+import { MenuIcon, XIcon, SunIcon, MoonIcon } from "@heroicons/react/outline";
 import React, { useState } from "react";
 import Toggle from "./Toggle";
 
@@ -14,6 +14,7 @@ function Navbar() {
       <div className="flex flex-col text-center text-xs cursor-pointer">
         <p>YUICHIRO</p>
         <p>TOYAMA</p>
+        {/* <img src="/yt-dark.svg" className="h-8"></img> */}
       </div>
       <nav className="flex items-center cursor-pointer">
         <div className="menu-icon inline-flex sm:hidden " onClick={handleClick}>

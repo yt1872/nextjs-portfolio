@@ -5,14 +5,14 @@ function Hero() {
   return (
     <div
       id="home"
-      className="text-gray-900 dark:text-gray-100 flex flex-col sm:flex-row sm:items-center md:justify-evenly h-screen justify-center mx-5 text-2xl leading-9 sm:text-2xl md:text-3xl font-medium tracking-wider"
+      className="flex flex-col md:flex-row md:items-center h-screen justify-center mx-5"
     >
-      <div className="">
-        <div className="mb-2 font-medium">Hi &#x1f44b;,</div>
-        <div className="mb-2 font-medium">I'm Yuichiro Toyama.</div>
-        <div className="font-medium">
+      <div className="md:w-1/2">
+        <div className="mb-2 font-medium text-xl">Hi &#x1f44b;,</div>
+        <div className="mb-2 font-medium text-3xl">I'm Yuichiro Toyama.</div>
+        <div className="font-medium text-3xl">
           A&nbsp;
-          <mark className="font-semibold not-italic bg-secondary px-2 py-1 rounded-md">
+          <mark className="font-semibold not-italic rounded-md">
             Fullstack Developer
           </mark>
           &nbsp; based in Tokyo.
@@ -32,7 +32,7 @@ function Hero() {
         </div>
       </div>
       <div>
-        <div className="w-8/12 m-auto md:w-1/3">
+        <div className="w-8/12 m-auto md:w-full">
           <Programmer />
         </div>
       </div>

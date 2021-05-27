@@ -7,7 +7,7 @@ function ProjectsSection({ projectName, projectDesc, stack, image }) {
     itemsToRender = stack.map((item) => {
       return (
         <p
-          className="border text-xs border-primary rounded-md p-1 mr-2 mb-1"
+          className="text-xs bg-gray-200 dark:bg-gray-700  rounded-md py-1 px-2 mr-2 mb-1"
           key={item}
         >
           {item}

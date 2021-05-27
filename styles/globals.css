@@ -29,19 +29,29 @@
   .primary-btn {
     @apply cursor-pointer bg-blue-600 hover:bg-blue-500 text-blue-100 text-sm px-4 py-3 rounded-md tracking-wider;
   }
+
+  .contact-form {
+    @apply relative flex;
+  }
+
+  .contact-form label {
+    @apply top-2 absolute left-2 duration-300 bg-transparent pointer-events-none;
+    /* transition: top 0.3s; */
+  }
+
+  .contact-form input:focus + label {
+    @apply -top-5 bg-accent dark:bg-gray-800 text-xs;
+  }
+
+  .contact-form input:valid + label {
+    @apply -top-5 bg-accent dark:bg-gray-800 text-xs;
+  }
+
+  .contact-form textarea:focus + label {
+    @apply -top-5 bg-accent dark:bg-gray-800 text-xs;
+  }
+
+  .contact-form textarea:valid + label {
+    @apply -top-5 bg-accent dark:bg-gray-800 text-xs;
+  }
 }
-
-/* body {
-  background-color: var(--primary);
-} */
-
-/* .root,
-#root,
-#docs-root {
-  --primary: #0e61fe;
-  --secondary: #cfe1ff;
-  --accent: #f5f8ff;
-  --background: #fff;
-  --main: #0d0106;
-  --header: #2d3748;
-} */
