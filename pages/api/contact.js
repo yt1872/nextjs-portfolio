@@ -18,14 +18,9 @@ export default async (req, res) => {
   (async () => {
     try {
       await sgMail.send(msg);
+      res.status(200).json(req.body);
     } catch (error) {
-      console.error(error);
-
-      if (error.response) {
-        console.error(error.response.body);
-      }
+      res.status(error.code).json(req.body);
     }
   })();
-
-  res.status(200).json(req.body);
 };

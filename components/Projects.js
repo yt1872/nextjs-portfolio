@@ -13,7 +13,7 @@ function Projects() {
         <div className="py-3 md:w-1/3 md:text-right md:mr-5">
           <h1>PREVIOUS WORK</h1>
         </div>
-        <div className="md:w-1/2">
+        <div className="px-2 md:w-1/2">
           <ProjectsSection {...projectObjOne} />
           <ProjectsSection {...projectObjTwo} />
           <ProjectsSection {...projectObjThree} />

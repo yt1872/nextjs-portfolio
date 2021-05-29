@@ -11,16 +11,22 @@ function Footer() {
       <div class="flex text-xl">
         <a href="https://github.com/yt1872" className="mr-3 cursor-pointer">
           <div>
-            <FaGithub />
+            <FaGithub className="hover:text-primary" />
           </div>
         </a>
         <a
           href="https://www.linkedin.com/in/yt1872/"
           className="visited:text-red-600"
         >
-          <FaLinkedin />
+          <FaLinkedin className="hover:text-primary" />
         </a>
       </div>
+      {/* <div className="">
+        <select className="bg-gray-800 tracking-wider font-light">
+          <option>ENGLISH</option>
+          <option>JAPANESE</option>
+        </select>
+      </div> */}
     </div>
   );
 }
