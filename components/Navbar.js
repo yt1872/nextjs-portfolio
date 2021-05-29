@@ -27,40 +27,40 @@ function Navbar() {
   let navContact = useRef(null);
   let navToggle = useRef(null);
 
-  useEffect((click) => {
-    if (click) {
-      TweenMax.fromTo(
-        navLogo,
-        { opacity: 0, x: -30 },
-        { opacity: 1, x: 0, duration: 1 }
-      );
-      TweenMax.fromTo(
-        navHome,
-        { opacity: 0, y: -30 },
-        { opacity: 1, y: 0, duration: 1 }
-      );
-      TweenMax.fromTo(
-        navAbout,
-        { opacity: 0, y: -30 },
-        { opacity: 1, y: 0, duration: 1, delay: 0.1 }
-      );
-      TweenMax.fromTo(
-        navWork,
-        { opacity: 0, y: -30 },
-        { opacity: 1, y: 0, duration: 1, delay: 0.2 }
-      );
-      TweenMax.fromTo(
-        navContact,
-        { opacity: 0, y: -30 },
-        { opacity: 1, y: 0, duration: 1, delay: 0.3 }
-      );
-      TweenMax.fromTo(
-        navToggle,
-        { opacity: 0, y: -30 },
-        { opacity: 1, y: 0, duration: 1, delay: 0.4 }
-      );
-    }
+  // if (size.width >= 640) {
+  useEffect(() => {
+    TweenMax.fromTo(
+      navLogo,
+      { opacity: 0, x: -30 },
+      { opacity: 1, x: 0, duration: 1 }
+    );
+    TweenMax.fromTo(
+      navHome,
+      { opacity: 0, y: -30 },
+      { opacity: 1, y: 0, duration: 1 }
+    );
+    TweenMax.fromTo(
+      navAbout,
+      { opacity: 0, y: -30 },
+      { opacity: 1, y: 0, duration: 1, delay: 0.1 }
+    );
+    TweenMax.fromTo(
+      navWork,
+      { opacity: 0, y: -30 },
+      { opacity: 1, y: 0, duration: 1, delay: 0.2 }
+    );
+    TweenMax.fromTo(
+      navContact,
+      { opacity: 0, y: -30 },
+      { opacity: 1, y: 0, duration: 1, delay: 0.3 }
+    );
+    TweenMax.fromTo(
+      navToggle,
+      { opacity: 0, y: -30 },
+      { opacity: 1, y: 0, duration: 1, delay: 0.4 }
+    );
   });
+  // }
 
   return (
     <div className="flex justify-between p-5 w-screen fixed items-center tracking-wider z-10 bg-accent dark:bg-gray-800">

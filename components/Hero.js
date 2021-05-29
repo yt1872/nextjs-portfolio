@@ -40,14 +40,14 @@ function Hero() {
   return (
     <div
       id="home"
-      className="flex flex-col md:flex-row md:items-center h-screen justify-center md:justify-evenly mx-6 sm:px-6"
+      className="flex flex-col md:flex-row md:items-center h-screen justify-center mx-6 sm:px-6"
     >
       <div className="flex flex-col sm:justify-center mt-20 md:mt-0">
         <div className="text-3xl mb-2" ref={(el) => (textHi = el)}>
           Hi &#x1f44b;,
         </div>
         <div
-          className="text-3xl md:text-4xl mb-4"
+          className="text-3xl md:text-4xl lg:text-5xl mb-4"
           ref={(el) => (textName = el)}
         >
           I'm
