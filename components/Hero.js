@@ -1,7 +1,7 @@
 import Programmer from "./Programmer";
 import { Link } from "react-scroll";
 import React, { useRef, useEffect } from "react";
-import { TweenMax, Power3 } from "gsap";
+import { gsap } from "gsap";
 
 function Hero() {
   let imageItem = useRef(null);
@@ -9,41 +9,61 @@ function Hero() {
   let textName = useRef(null);
   let textDesc = useRef(null);
   let btnCTA = useRef(null);
+  // let hiEmoji = useRef(null);
 
   useEffect(() => {
-    TweenMax.fromTo(
+    // gsap.fromTo(
+    //   hiEmoji,
+    //   {
+    //     opacity: 1,
+    //     rotate: 30,
+    //     duration: 0.5,
+    //   },
+    //   {
+    //     opacity: 1,
+    //     rotate: -30,
+    //     repeat: -1,
+    //     duration: 0.5,
+    //     yoyo: true,
+    //     transformOrigin: "50% 0%",
+    //   }
+    // );
+    gsap.fromTo(
       textHi,
-      { opacity: 0, x: -30 },
+      { opacity: 0, x: -50 },
       { opacity: 1, x: 0, duration: 1, delay: 0.5 }
     );
-    TweenMax.fromTo(
+    gsap.fromTo(
       textName,
-      { opacity: 0, x: -30 },
+      { opacity: 0, x: -50 },
       { opacity: 1, x: 0, duration: 1, delay: 0.6 }
     );
-    TweenMax.fromTo(
+    gsap.fromTo(
       textDesc,
-      { opacity: 0, x: -30 },
+      { opacity: 0, x: -50 },
       { opacity: 1, x: 0, duration: 1, delay: 0.7 }
     );
-    TweenMax.fromTo(
+    gsap.fromTo(
       btnCTA,
-      { opacity: 0, x: -30 },
+      { opacity: 0, x: -50 },
       { opacity: 1, x: 0, duration: 1, delay: 0.8 }
     );
-    TweenMax.fromTo(
+    gsap.fromTo(
       imageItem,
-      { opacity: 0, x: 30 },
+      { opacity: 0, x: 50 },
       { opacity: 1, x: 0, duration: 1, delay: 0.9 }
     );
   });
   return (
     <div
       id="home"
-      className="flex flex-col md:flex-row md:items-center h-screen justify-center mx-6 sm:px-6"
+      className="flex flex-col sm:flex-row sm:items-center h-screen justify-center sm:justify-evenly mx-6 sm:px-6"
     >
-      <div className="flex flex-col sm:justify-center mt-20 md:mt-0">
-        <div className="text-3xl mb-2" ref={(el) => (textHi = el)}>
+      <div className="flex flex-col sm:justify-center mt-16 md:mt-0">
+        <div
+          className="text-2xl md:text-3xl lg:text-4xl mb-2 flex"
+          ref={(el) => (textHi = el)}
+        >
           Hi &#x1f44b;,
         </div>
         <div
@@ -53,7 +73,10 @@ function Hero() {
           I'm
           <mark> Yuichiro Toyama</mark>.
         </div>
-        <div className="mb-4" ref={(el) => (textDesc = el)}>
+        <div
+          className="mb-4 text-sm md:text-base lg:text-lg"
+          ref={(el) => (textDesc = el)}
+        >
           <div className="">
             A<mark className=""> Fullstack Developer </mark>
             based in Tokyo.
@@ -73,7 +96,7 @@ function Hero() {
         </div>
       </div>
       <div className="flex justify-center" ref={(el) => (imageItem = el)}>
-        <div className="w-full sm:w-1/2 md:w-full">
+        <div className="w-full">
           <Programmer />
         </div>
       </div>

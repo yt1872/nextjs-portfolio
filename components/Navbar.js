@@ -4,7 +4,7 @@ import {
   XIcon,
   SunIcon,
   MoonIcon,
-  CogIcon,
+  // CogIcon,
 } from "@heroicons/react/outline";
 import React, { useState, useRef, useEffect } from "react";
 import Toggle from "./Toggle";
@@ -17,8 +17,8 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  let [settings, setSettings] = useState(false);
-  const handleSettings = () => setSettings(!settings);
+  // let [settings, setSettings] = useState(false);
+  // const handleSettings = () => setSettings(!settings);
 
   let navLogo = useRef(null);
   let navHome = useRef(null);
@@ -31,33 +31,33 @@ function Navbar() {
   useEffect(() => {
     TweenMax.fromTo(
       navLogo,
-      { opacity: 0, x: -30 },
-      { opacity: 1, x: 0, duration: 1 }
-    );
-    TweenMax.fromTo(
-      navHome,
       { opacity: 0, y: -30 },
       { opacity: 1, y: 0, duration: 1 }
     );
     TweenMax.fromTo(
-      navAbout,
+      navHome,
       { opacity: 0, y: -30 },
       { opacity: 1, y: 0, duration: 1, delay: 0.1 }
     );
     TweenMax.fromTo(
-      navWork,
+      navAbout,
       { opacity: 0, y: -30 },
       { opacity: 1, y: 0, duration: 1, delay: 0.2 }
     );
     TweenMax.fromTo(
-      navContact,
+      navWork,
       { opacity: 0, y: -30 },
       { opacity: 1, y: 0, duration: 1, delay: 0.3 }
     );
     TweenMax.fromTo(
-      navToggle,
+      navContact,
       { opacity: 0, y: -30 },
       { opacity: 1, y: 0, duration: 1, delay: 0.4 }
+    );
+    TweenMax.fromTo(
+      navToggle,
+      { opacity: 0, y: -30 },
+      { opacity: 1, y: 0, duration: 1, delay: 0.5 }
     );
   });
   // }
@@ -126,8 +126,8 @@ function Navbar() {
                 ref={(el) => (navToggle = el)}
               >
                 <SunIcon className="h-5" />
-                <div className="mx-2 items-center">
-                  <Toggle />
+                <div className="mx-2 items-center scale-75">
+                  <Toggle className="scale-75" />
                 </div>
                 <MoonIcon className="h-5" />
               </div>

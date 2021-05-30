@@ -1,5 +1,4 @@
 import { Link } from "react-scroll";
-import React, { useState } from "react";
 
 function NavbarItem({ navLinkName, navLinkPath, closeMobileMenu }) {
   return (

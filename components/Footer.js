@@ -10,14 +10,9 @@ function Footer() {
       </div>
       <div class="flex text-xl">
         <a href="https://github.com/yt1872" className="mr-3 cursor-pointer">
-          <div>
-            <FaGithub className="hover:text-primary" />
-          </div>
+          <FaGithub className="hover:text-primary" />
         </a>
-        <a
-          href="https://www.linkedin.com/in/yt1872/"
-          className="visited:text-red-600"
-        >
+        <a href="https://www.linkedin.com/in/yt1872/">
           <FaLinkedin className="hover:text-primary" />
         </a>
       </div>

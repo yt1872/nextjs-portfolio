@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/solid";
-import React, { useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -28,92 +30,136 @@ function Contact() {
     });
   }
 
+  gsap.registerPlugin(ScrollTrigger);
+  let contactTitle = useRef(null);
+  let contactForm = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      contactTitle,
+      { opacity: 0, x: -50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: contactTitle,
+        },
+      }
+    );
+    gsap.fromTo(
+      contactForm,
+      { opacity: 0, x: 50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: contactForm,
+        },
+      }
+    );
+  });
   return (
-    <div id="contact" className="mx-5 pt-16 flex flex-col md:flex-row">
-      <div className="pt-3 md:w-1/3 md:text-right md:mr-5">
-        <h1>CONTACT ME</h1>
-      </div>
-      <div className="text-sm py-6 px-2 md:pt-3 md:w-1/2">
-        <form onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off">
-          <div className="mb-8">
-            <div className="contact-form">
-              <input
-                required
-                type="text"
-                name="name"
-                className={`${errors.name ? "border border-red-500" : null}`}
-                {...register("name", {
-                  required: {
-                    value: true,
-                    message: "Please enter your name",
-                  },
-                })}
-              />
-              <label className="">Your Name</label>
+    <div id="contact" className="mx-5 pt-16 md:px-10 md:m-0">
+      <div className="flex flex-col md:flex-row w-full">
+        <div
+          className="pt-3 md:w-1/3 md:text-right md:mr-5"
+          ref={(el) => (contactTitle = el)}
+        >
+          <h1>CONTACT ME</h1>
+        </div>
+        <div
+          className="text-sm py-6 px-2 md:pt-3 md:w-1/2"
+          ref={(el) => (contactForm = el)}
+        >
+          <form onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off">
+            <div className="mb-8">
+              <div className="contact-form">
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  className={`${errors.name ? "border border-red-500" : null}`}
+                  {...register("name", {
+                    required: {
+                      value: true,
+                      message: "Please enter your name",
+                    },
+                  })}
+                />
+                <label className="">Your Name</label>
+              </div>
+              {errors.name && (
+                <p className="pl-1 text-red-600 text-xs">
+                  {errors.name.message}
+                </p>
+              )}
             </div>
-            {errors.name && (
-              <p className="pl-1 text-red-600 text-xs">{errors.name.message}</p>
-            )}
-          </div>
 
-          <div className="mb-8">
-            <div className="contact-form">
-              <input
-                required
-                type="text"
-                name="email"
-                className={`${errors.name ? "border border-red-500" : null}`}
-                {...register("email", {
-                  required: {
-                    value: true,
-                    message: "Please enter your email",
-                  },
-                  pattern: {
-                    value:
-                      /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                    message: "Invalid email address",
-                  },
-                })}
-              />
-              <label className="">Your Email</label>
+            <div className="mb-8">
+              <div className="contact-form">
+                <input
+                  required
+                  type="text"
+                  name="email"
+                  className={`${errors.name ? "border border-red-500" : null}`}
+                  {...register("email", {
+                    required: {
+                      value: true,
+                      message: "Please enter your email",
+                    },
+                    pattern: {
+                      value:
+                        /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                      message: "Invalid email address",
+                    },
+                  })}
+                />
+                <label className="">Your Email</label>
+              </div>
+              {errors.email && (
+                <p className="pl-1 text-red-600 text-xs">
+                  {errors.email.message}
+                </p>
+              )}
             </div>
-            {errors.email && (
-              <p className="pl-1 text-red-600 text-xs">
-                {errors.email.message}
-              </p>
-            )}
-          </div>
 
-          <div className="mb-8">
-            <div className="contact-form">
-              <textarea
-                required
-                type="text"
-                rows={5}
-                name="message"
-                className={`${errors.name ? "border border-red-500" : null}`}
-                {...register("message", {
-                  required: {
-                    value: true,
-                    message: "Please enter a message",
-                  },
-                  maxLength: {
-                    value: 500,
-                    message: "Max length is 500 characters",
-                  },
-                })}
-              />
-              <label className="">Message</label>
+            <div className="mb-8">
+              <div className="contact-form">
+                <textarea
+                  required
+                  type="text"
+                  rows={5}
+                  name="message"
+                  className={`${errors.name ? "border border-red-500" : null}`}
+                  {...register("message", {
+                    required: {
+                      value: true,
+                      message: "Please enter a message",
+                    },
+                    maxLength: {
+                      value: 500,
+                      message: "Max length is 500 characters",
+                    },
+                  })}
+                />
+                <label className="">Message</label>
+              </div>
+              {errors.message && (
+                <p className="pl-1 text-red-600 text-xs">
+                  {errors.message.message}
+                </p>
+              )}
             </div>
-            {errors.message && (
-              <p className="pl-1 text-red-600 text-xs">
-                {errors.message.message}
-              </p>
-            )}
-          </div>
-          <input type="submit" className="primary-btn w-full" value="SUBMIT" />
-          {/* <div onClick={handleModal}>test</div> */}
-        </form>
+            <input
+              type="submit"
+              className="primary-btn w-full"
+              value="SUBMIT"
+            />
+            <div onClick={handleModal}>test</div>
+          </form>
+        </div>
       </div>
 
       {submitted ? (
