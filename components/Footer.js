@@ -3,7 +3,7 @@ import { IconContext } from "react-icons";
 
 function Footer() {
   return (
-    <div class="flex justify-between text-sm py-10 px-5 items-center">
+    <div class="flex justify-between text-sm p-5 items-center">
       <div>
         <div class="">©︎ 2021 All Rights Reserved</div>
         <div>Yuichiro Toyama</div>

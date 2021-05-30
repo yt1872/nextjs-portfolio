@@ -157,7 +157,7 @@ function Contact() {
               className="primary-btn w-full"
               value="SUBMIT"
             />
-            <div onClick={handleModal}>test</div>
+            {/* <div onClick={handleModal}>test</div> */}
           </form>
         </div>
       </div>
