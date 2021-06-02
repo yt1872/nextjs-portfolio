@@ -7,6 +7,7 @@ import {
   projectObjTwo,
   projectObjThree,
   projectObjFour,
+  projectObjFive,
 } from "./Data";
 
 function Projects() {
@@ -16,6 +17,7 @@ function Projects() {
   let projectTwo = useRef(null);
   let projectThree = useRef(null);
   let projectFour = useRef(null);
+  let projectFive = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(
@@ -27,6 +29,18 @@ function Projects() {
         duration: 1,
         scrollTrigger: {
           trigger: projectsTitle,
+        },
+      }
+    );
+    gsap.fromTo(
+      projectFive,
+      { opacity: 0, x: 50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: projectFive,
         },
       }
     );
@@ -90,6 +104,9 @@ function Projects() {
           <h1>PREVIOUS WORK</h1>
         </div>
         <div className="px-2 py-3 md:w-1/2">
+          <div ref={(el) => (projectFive = el)}>
+            <ProjectsSection {...projectObjFive} />
+          </div>
           <div ref={(el) => (projectOne = el)}>
             <ProjectsSection {...projectObjOne} />
           </div>
