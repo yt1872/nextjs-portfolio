@@ -11,6 +11,7 @@
     "@headlessui/react": "^1.2.0",
     "@heroicons/react": "^1.0.1",
     "@sendgrid/mail": "^7.4.4",
+    "carousel": "^0.0.3",
     "flag-icon-css": "^3.5.0",
     "gsap": "^3.6.1",
     "install": "^0.13.0",
@@ -21,6 +22,7 @@
     "react-dom": "17.0.2",
     "react-hook-form": "^7.6.5",
     "react-icons": "^4.2.0",
+    "react-responsive": "^8.2.0",
     "react-scroll": "^1.8.2"
   },
   "devDependencies": {

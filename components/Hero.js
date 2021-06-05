@@ -57,9 +57,9 @@ function Hero() {
   return (
     <div
       id="home"
-      className="flex flex-col sm:flex-row sm:items-center h-screen justify-center sm:justify-evenly mx-6 sm:px-6"
+      className="flex flex-col sm:flex-row sm:items-center h-screen justify-center sm:justify-evenly xl:justify-center mx-6 sm:px-6"
     >
-      <div className="flex flex-col sm:justify-center mt-16 md:mt-0">
+      <div className="flex flex-col mx-auto sm:justify-center mt-16 sm:mt-0 xl:mx-0">
         <div
           className="text-2xl md:text-3xl lg:text-4xl mb-2 flex"
           ref={(el) => (textHi = el)}
@@ -95,10 +95,11 @@ function Hero() {
           </a> */}
         </div>
       </div>
-      <div className="flex justify-center" ref={(el) => (imageItem = el)}>
-        <div className="w-full">
-          <Programmer />
-        </div>
+      <div
+        className="w-80 sm:w-1/3 md:w-1/3 mx-auto max-w-xl xl:mx-0"
+        ref={(el) => (imageItem = el)}
+      >
+        <Programmer />
       </div>
     </div>
   );

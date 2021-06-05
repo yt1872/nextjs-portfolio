@@ -8,11 +8,21 @@ function Footer() {
         <div class="">©︎ 2021 All Rights Reserved</div>
         <div>Yuichiro Toyama</div>
       </div>
-      <div class="flex text-xl">
-        <a href="https://github.com/yt1872" className="mr-3 cursor-pointer">
+      <div class="flex text-xl space-x-3">
+        <a
+          href="https://github.com/yt1872"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cursor-pointer"
+        >
           <FaGithub className="hover:text-primary" />
         </a>
-        <a href="https://www.linkedin.com/in/yt1872/">
+        <a
+          href="https://www.linkedin.com/in/yt1872/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cursor-pointer"
+        >
           <FaLinkedin className="hover:text-primary" />
         </a>
       </div>
