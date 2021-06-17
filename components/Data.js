@@ -6,6 +6,9 @@ export const projectObjOne = {
   images: ["/images/livetranslate2.png", "/images/livetranslate1.png"],
   url: "",
   code: "https://github.com/MarcusRapacioli/livetranslate",
+  fontColor: "#FFF",
+  bgColor: "#ff9682",
+  stackColor: "#DD6C59",
 };
 
 export const projectObjTwo = {
@@ -16,6 +19,9 @@ export const projectObjTwo = {
   images: ["/images/airpaws1.png", "/images/airpaws3.png"],
   url: "",
   code: "https://github.com/MarcusRapacioli/AirPaws",
+  fontColor: "#FFF",
+  bgColor: "#77736c",
+  stackColor: "#58554d",
 };
 
 export const projectObjThree = {
@@ -26,6 +32,9 @@ export const projectObjThree = {
   images: ["/images/portfolio.png", "/images/portfolio2.png"],
   url: "https://yuichirotoyama.com/",
   code: "https://github.com/yt1872/nextjs-portfolio",
+  fontColor: "#FFF",
+  bgColor: "#50627d",
+  stackColor: "#202936",
 };
 
 export const projectObjFour = {
@@ -36,6 +45,9 @@ export const projectObjFour = {
   images: ["/images/Private.png"],
   url: "",
   code: "",
+  fontColor: "#FFF",
+  bgColor: "#8a8a8a",
+  stackColor: "#c4c4c4",
 };
 
 export const projectObjFive = {
@@ -43,7 +55,10 @@ export const projectObjFive = {
   projectDesc:
     "An IMDb like application to find movies and view relevant information. Metadata provided by TMDb API",
   stack: ["Next.js", "Tailwind"],
-  images: ["/images/popcorn.png", "/images/popcorn2.png"],
+  images: ["/images/popcorn2.png", "/images/popcorn.png"],
   url: "https://imdb-clone-seven.vercel.app/",
   code: "https://github.com/yt1872/nextjs-imdb-clone",
+  fontColor: "#FFF",
+  bgColor: "#2E3A56",
+  stackColor: "#5A6F9E",
 };

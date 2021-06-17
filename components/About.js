@@ -75,8 +75,9 @@ function About() {
           <p>
             A <mark>bilingual</mark> web developer with an aerospace engineering
             degree now working as a full stack developer for a Japanese system
-            integration company. Born and raised in the <mark>U.K.</mark> now
-            living in <mark>Tokyo</mark>.
+            integration company. Born and raised in the &#127468;&#127463;{" "}
+            <mark>U.K.</mark> now living in &#127471;&#127477;<mark>Tokyo</mark>
+            .
             <br />
             <br />
             During my degree I studied subjects ranging from aero propulsion to
@@ -87,13 +88,17 @@ function About() {
             <br />
             <br />
             After graduation, I attended a coding bootcamp to gain industry
-            ready skills to start a career in web development. I studied{" "}
+            ready skills to start a career in web development I studied{" "}
             <mark>graphic design</mark> at school and always had a keen eye for
             aesthetics and fine detail. Now looking for opportunities to focus
-            on front end and learn more about<mark> UI/UX</mark>. <br />
+            on front end and learn more about
+            <mark> UI/UX</mark>. <br />
             <br />
             In my spare time I like to swing a golf club, walk 4 hours in a
-            field and make the odd birdie.
+            field and make the odd birdie.{" "}
+            <span className="text-lg">
+              &#127948;&#65039;&#8205;&#9794;&#65039;
+            </span>
           </p>
         </div>
       </div>

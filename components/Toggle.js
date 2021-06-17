@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Switch } from "@headlessui/react";
 
 function Toggle() {
-  const [enabled, setEnabled] = useState(true);
+  const [enabled, setEnabled] = useState(false);
 
   if (process.browser) {
     if (enabled) {

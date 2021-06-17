@@ -67,7 +67,7 @@ function Navbar() {
       <div
         ref={(el) => (navLogo = el)}
         href="#home"
-        className="flex flex-col text-center text-xs cursor-pointer hover:bg-gray-400 dark:hover:bg-gray-600 px-2 py-1 rounded tracking-wider"
+        className="flex flex-col text-center text-xs cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600 px-2 py-1 rounded tracking-wider"
       >
         <Link to="home" spy={true} smooth={true}>
           <p>YUICHIRO</p>

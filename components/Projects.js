@@ -8,6 +8,7 @@ import {
   projectObjThree,
   projectObjFour,
   projectObjFive,
+  projectObjSix,
 } from "./Data";
 
 function Projects() {
