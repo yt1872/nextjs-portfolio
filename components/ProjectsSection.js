@@ -35,7 +35,7 @@ function ProjectsSection({
     itemsToRender = stack.map((item) => {
       return (
         <p
-          className="text-xs rounded py-1 px-2 mr-2 mt-2"
+          className="text-xs rounded-md py-1 px-2 mr-2 mt-2"
           style={stackPill}
           key={item}
         >
@@ -53,7 +53,10 @@ function ProjectsSection({
   </Carousel> */
   }
   return (
-    <div className="p-8 rounded mb-6 flex flex-col-reverse" style={projectCard}>
+    <div
+      className="p-8 rounded-md mb-6 flex flex-col-reverse"
+      style={projectCard}
+    >
       <div className="">
         <div className="pb-2 pt-4">
           <h2>{projectName}</h2>

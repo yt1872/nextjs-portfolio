@@ -66,7 +66,7 @@ function About() {
           className="pt-3 md:w-1/3 md:text-right md:mr-5"
           ref={(el) => (aboutMeTitle = el)}
         >
-          <h1>A LITTLE BIT ABOUT ME</h1>
+          <h1>A LITTLE ABOUT ME</h1>
         </div>
         <div
           className="text-sm py-3 px-2 md:w-1/2 leading-6"

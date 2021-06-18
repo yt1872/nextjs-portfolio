@@ -21,7 +21,7 @@
   }
 
   h1 {
-    @apply text-base font-semibold tracking-wider text-primary dark:text-primary;
+    @apply text-lg font-semibold tracking-wider text-primary dark:text-primary;
   }
 
   h2 {
@@ -33,7 +33,7 @@
   }
 
   .primary-btn {
-    @apply cursor-pointer bg-blue-600 hover:bg-blue-500 text-blue-100 text-sm px-4 py-3 rounded tracking-wider;
+    @apply cursor-pointer shadow-xl hover:shadow-none hover:transform hover:translate-y-1 transition ease-in-out duration-200 bg-gradient-to-r from-blue-600 to-indigo-500 text-blue-100 text-sm px-4 py-3 rounded-md tracking-wider;
   }
 
   .contact-form {
@@ -42,7 +42,7 @@
 
   .contact-form input,
   .contact-form textarea {
-    @apply w-full bg-gray-200 dark:bg-gray-700 focus:border focus:border-green-400 rounded p-2 focus:outline-none;
+    @apply w-full bg-gray-200 dark:bg-gray-700 focus:ring-2 focus:ring-green-400 rounded-md p-2 focus:outline-none;
   }
 
   .contact-form label {

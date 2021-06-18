@@ -13,12 +13,11 @@ import { Link } from "react-scroll";
 
 function Navbar() {
   let [click, setClick] = useState(false);
+  let [atTop, setAtTop] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-
-  // let [settings, setSettings] = useState(false);
-  // const handleSettings = () => setSettings(!settings);
+  const notTop = () => setAtTop(false);
 
   let navLogo = useRef(null);
   let navHome = useRef(null);
@@ -27,7 +26,6 @@ function Navbar() {
   let navContact = useRef(null);
   let navToggle = useRef(null);
 
-  // if (size.width >= 640) {
   useEffect(() => {
     TweenMax.fromTo(
       navLogo,
@@ -60,14 +58,17 @@ function Navbar() {
       { opacity: 1, y: 0, duration: 1, delay: 0.5 }
     );
   });
-  // }
 
   return (
-    <div className="flex justify-between p-5 w-screen fixed items-center tracking-wider z-10 bg-accent dark:bg-gray-800">
+    <div
+      className={`${
+        atTop ? "shadow" : "shadow-none"
+      } flex justify-between p-5 w-screen fixed items-center tracking-wider z-10 bg-accent dark:bg-gray-800 bg-opacity-95 shadow-sm`}
+    >
       <div
         ref={(el) => (navLogo = el)}
         href="#home"
-        className="flex flex-col text-center text-xs cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600 px-2 py-1 rounded tracking-wider"
+        className="flex flex-col text-center text-xs cursor-pointer hover:text-blue-500 0 px-2 py-1 tracking-wider"
       >
         <Link to="home" spy={true} smooth={true}>
           <p>YUICHIRO</p>
