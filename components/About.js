@@ -1,76 +1,22 @@
 import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 function About() {
-  gsap.registerPlugin(ScrollTrigger);
-  let aboutMeTitle = useRef(null);
-  let aboutMeText = useRef(null);
-  let skillsTitle = useRef(null);
-  let skillsList = useRef(null);
-
-  useEffect(() => {
-    gsap.fromTo(
-      aboutMeTitle,
-      { opacity: 0, x: -50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: aboutMeTitle,
-        },
-      }
-    );
-    gsap.fromTo(
-      aboutMeText,
-      { opacity: 0, x: 50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: aboutMeText,
-        },
-      }
-    );
-    gsap.fromTo(
-      skillsTitle,
-      { opacity: 0, x: -50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: skillsTitle,
-        },
-      }
-    );
-    gsap.fromTo(
-      skillsList,
-      { opacity: 0, x: 50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: skillsList,
-        },
-      }
-    );
-  });
   return (
-    <div className="mx-5 md:pt-16 md:px-10 md:m-0" id="about">
-      <div className="flex flex-col md:flex-row w-full">
+    <div className="mx-6 md:w-2/3 md:m-auto" id="about">
+      <div>
         <div
-          className="pt-3 md:w-1/3 md:text-right md:mr-5"
-          ref={(el) => (aboutMeTitle = el)}
+          data-sal="slide-right"
+          data-sal-easing="ease"
+          data-sal-duration="500"
+          data-sal-once
         >
-          <h1>A LITTLE ABOUT ME</h1>
+          <h1 className="mb-4">A little about me</h1>
         </div>
         <div
-          className="text-sm py-3 px-2 md:w-1/2 leading-6"
-          ref={(el) => (aboutMeText = el)}
+          data-sal="slide-left"
+          data-sal-easing="ease"
+          data-sal-duration="500"
+          data-sal-once
         >
           <p>
             A <mark>bilingual</mark> web developer with an aerospace engineering
@@ -88,7 +34,7 @@ function About() {
             <br />
             <br />
             After graduation, I attended a coding bootcamp to gain industry
-            ready skills to start a career in web development I studied{" "}
+            ready skills to start a career in web development. I studied{" "}
             <mark>graphic design</mark> at school and always had a keen eye for
             aesthetics and fine detail. Now looking for opportunities to focus
             on front end and learn more about
@@ -102,18 +48,26 @@ function About() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row w-full mt-10">
+      <div className="mb-6">
         <div
-          className="pt-3 md:w-1/3 md:text-right md:mr-5"
-          ref={(el) => (skillsTitle = el)}
+          className="mb-4 mt-6"
+          data-sal="slide-right"
+          data-sal-easing="ease"
+          data-sal-duration="500"
+          data-sal-once
         >
-          <h1>SOME OF MY SKILLS</h1>
+          <h1>Some of my skills</h1>
         </div>
-        <div className="text-sm py-3 md:w-1/2" ref={(el) => (skillsList = el)}>
-          <div className="flex justify-evenly leading-6">
-            <div className="">
+        <div
+          data-sal="slide-left"
+          data-sal-easing="ease"
+          data-sal-duration="500"
+          data-sal-once
+        >
+          <div className="flex justify-between">
+            <div>
               <h3>FRONTEND</h3>
-              <div className="py-1">
+              <div>
                 <ul>
                   <li>&gt; HTML</li>
                   <li>&gt; CSS</li>
@@ -124,9 +78,9 @@ function About() {
                 </ul>
               </div>
             </div>
-            <div className="">
+            <div>
               <h3>BACKEND</h3>
-              <div className="py-1">
+              <div>
                 <ul>
                   <li>&gt; C#</li>
                   <li>&gt; .NET Core</li>
@@ -135,9 +89,9 @@ function About() {
                 </ul>
               </div>
             </div>
-            <div className="">
+            <div>
               <h3>OTHER</h3>
-              <div className="py-1">
+              <div>
                 <ul>
                   <li>&gt; Git</li>
                   <li>&gt; SQL</li>
@@ -149,8 +103,13 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="pt-5 justify-center flex">
-        <a href="/resume.pdf" download="Resume.pdf" className="primary-btn">
+      <div
+        className="text-center"
+        data-sal="slide-up"
+        data-sal-easing="ease"
+        data-sal-duration="500"
+      >
+        <a href="/CV2021.pdf" download="Resume.pdf" className="primary-btn">
           DOWNLOAD RESUME
         </a>
       </div>

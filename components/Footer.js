@@ -26,12 +26,6 @@ function Footer() {
           <FaLinkedin className="hover:text-primary" />
         </a>
       </div>
-      {/* <div className="">
-        <select className="bg-gray-800 tracking-wider font-light">
-          <option>ENGLISH</option>
-          <option>JAPANESE</option>
-        </select>
-      </div> */}
     </div>
   );
 }

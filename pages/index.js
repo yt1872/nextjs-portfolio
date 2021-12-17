@@ -8,7 +8,7 @@ import Projects from "../components/Projects";
 
 export default function Home() {
   return (
-    <div className="">
+    <>
       <Head>
         <title>Yuichiro Toyama</title>
         <link rel="icon" href="/yt-dark.svg" />
@@ -19,6 +19,6 @@ export default function Home() {
       <Projects />
       <Contact />
       <Footer />
-    </div>
+    </>
   );
 }

@@ -1,84 +1,36 @@
 import Programmer from "./Programmer";
 import { Link } from "react-scroll";
-import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
 
 function Hero() {
-  let imageItem = useRef(null);
-  let textHi = useRef(null);
-  let textName = useRef(null);
-  let textDesc = useRef(null);
-  let btnCTA = useRef(null);
-  // let hiEmoji = useRef(null);
-
-  useEffect(() => {
-    // gsap.fromTo(
-    //   hiEmoji,
-    //   {
-    //     opacity: 1,
-    //     rotate: 30,
-    //     duration: 0.5,
-    //   },
-    //   {
-    //     opacity: 1,
-    //     rotate: -30,
-    //     repeat: -1,
-    //     duration: 0.5,
-    //     yoyo: true,
-    //     transformOrigin: "50% 0%",
-    //   }
-    // );
-    gsap.fromTo(
-      textHi,
-      { opacity: 0, x: -50 },
-      { opacity: 1, x: 0, duration: 1, delay: 0.5 }
-    );
-    gsap.fromTo(
-      textName,
-      { opacity: 0, x: -50 },
-      { opacity: 1, x: 0, duration: 1, delay: 0.6 }
-    );
-    gsap.fromTo(
-      textDesc,
-      { opacity: 0, x: -50 },
-      { opacity: 1, x: 0, duration: 1, delay: 0.7 }
-    );
-    gsap.fromTo(
-      btnCTA,
-      { opacity: 0, x: -50 },
-      { opacity: 1, x: 0, duration: 1, delay: 0.8 }
-    );
-    gsap.fromTo(
-      imageItem,
-      { opacity: 0, x: 50 },
-      { opacity: 1, x: 0, duration: 1, delay: 0.9 }
-    );
-  });
   return (
     <div
       id="home"
-      className="flex flex-col sm:flex-row sm:items-center h-screen justify-center sm:justify-evenly xl:justify-center mx-6 sm:px-6"
+      className="flex flex-col sm:flex-row sm:items-center h-screen justify-evenly xl:justify-center mx-6 sm:px-6"
     >
-      <div className="flex flex-col mx-auto sm:justify-center mt-16 sm:mt-0 xl:mx-0">
-        <div
-          className="text-2xl md:text-3xl lg:text-4xl mb-2 flex"
-          ref={(el) => (textHi = el)}
-        >
-          Hi &#x1f44b;,
-        </div>
+      <div className="flex flex-col mx-auto sm:justify-center sm:mt-0 xl:mx-0">
         <div
           className="text-3xl md:text-4xl lg:text-5xl mb-4"
-          ref={(el) => (textName = el)}
+          data-sal="slide-right"
+          data-sal-delay="100"
+          data-sal-easing="ease"
+          data-sal-duration="500"
         >
-          I'm
-          <mark> Yuichiro Toyama</mark>.
+          Hi, I'm
+          <mark className="text-gradient-to-r from-blue-600 to-indigo-500">
+            {" "}
+            Yuichiro
+          </mark>
+          &#x1f44b;
         </div>
         <div
           className="mb-4 text-sm md:text-base lg:text-lg"
-          ref={(el) => (textDesc = el)}
+          data-sal="slide-right"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+          data-sal-duration="500"
         >
           <div className="">
-            A<mark className=""> Fullstack Developer </mark>
+            I'm a<mark className=""> Fullstack Developer </mark>
             based in Tokyo.
           </div>
           <div>
@@ -86,18 +38,24 @@ function Hero() {
             <mark className="">responsive</mark> websites.
           </div>
         </div>
-        <div className="flex" ref={(el) => (btnCTA = el)}>
+        <div
+          className="flex"
+          data-sal="slide-right"
+          data-sal-delay="500"
+          data-sal-easing="ease"
+          data-sal-duration="500"
+        >
           <Link to="contact" className="primary-btn" spy={true} smooth={true}>
             GET IN TOUCH
           </Link>
-          {/* <a className="primary-btn" href="#contact">
-            GET IN TOUCH
-          </a> */}
         </div>
       </div>
       <div
-        className="w-80 sm:w-1/3 md:w-1/3 mx-auto max-w-xl xl:mx-0"
-        ref={(el) => (imageItem = el)}
+        className=""
+        data-sal="slide-left"
+        data-sal-delay="700"
+        data-sal-easing="ease"
+        data-sal-duration="500"
       >
         <Programmer />
       </div>

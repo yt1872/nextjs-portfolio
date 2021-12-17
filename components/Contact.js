@@ -80,7 +80,11 @@ function Contact() {
                   required
                   type="text"
                   name="name"
-                  className={`${errors.name ? "border border-red-500" : null}`}
+                  className={`${
+                    errors.name
+                      ? "border border-red-500 focus:border-red-500"
+                      : "focus:ring-green-400"
+                  }`}
                   {...register("name", {
                     required: {
                       value: true,
@@ -103,7 +107,11 @@ function Contact() {
                   required
                   type="text"
                   name="email"
-                  className={`${errors.name ? "border border-red-500" : null}`}
+                  className={`${
+                    errors.name
+                      ? "border border-red-500 focus:border-red-500 focus:outline-none"
+                      : "focus:ring-green-400 focus:outline-none"
+                  }`}
                   {...register("email", {
                     required: {
                       value: true,
