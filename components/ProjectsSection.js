@@ -1,16 +1,11 @@
 import React from "react";
-import Carousel from "./Carousel";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { IconContext } from "react-icons";
 import { CodeIcon, ExternalLinkIcon } from "@heroicons/react/outline";
 import Image from "next/image";
-
-// import { Carousel } from "react-responsive-carousel";
-// import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function ProjectsSection({
   projectName,
   projectDesc,
+  projectTagline,
   stack,
   images,
   url,
@@ -18,7 +13,6 @@ function ProjectsSection({
   bgColor,
   fontColor,
   stackColor,
-  direction,
 }) {
   let projectCard = {
     backgroundColor: bgColor,
@@ -45,60 +39,24 @@ function ProjectsSection({
     });
   }
 
-  {
-    /* <Carousel>
-    {images.map((image, index) => {
-      <Image src={image} width={800} height={440} layout="responsive" />;
-    })}
-  </Carousel> */
-  }
   return (
     <div
-      className="p-8 rounded-md mb-6 flex flex-col-reverse"
-      style={projectCard}
+      data-aos="fade-up"
+      className="relative h-[50vw] md:h-[25vw] lg:h-[20vw]"
     >
-      <div className="">
-        <div className="pb-2 pt-4">
-          <h2>{projectName}</h2>
-          {/* <p>{direction ? "left to right" : "right to left"}</p> */}
+      <Image
+        src={images[0]}
+        layout="fill"
+        objectFit="cover"
+        className="rounded-md absolute"
+        priority="true"
+      />
+      <div className="absolute flex items-center bg-slate-700 text-slate-200 w-full h-full opacity-0 hover:opacity-95 rounded-md transition ease-in-out duration-200">
+        <div className="w-2/3 mx-auto text-center">
+          <div className="mb-4">{projectTagline}</div>
+          <button className="primary-btn">Find out more</button>
+          {/* <div>{projectDesc}</div> */}
         </div>
-        <div className="flex flex-col">
-          <div className="text-sm flex flex-auto leading-6 whitespace-pre-wrap">
-            {projectDesc}
-          </div>
-          <div className="flex justify-between">
-            <div className="flex mt-3 flex-wrap">{itemsToRender}</div>
-            {/* <div className="flex mt-3 mb-1 self-end space-x-2">
-              {code !== "" ? (
-                <IconContext.Provider value={{ size: "1.2rem" }}>
-                <FaGithub className="hover:text-primary" />
-                </IconContext.Provider>
-                ) : null}
-                {url !== "" ? (
-                  <IconContext.Provider value={{ size: "1.2rem" }}>
-                  <FaExternalLinkAlt className="hover:text-primary" />
-                  </IconContext.Provider>
-                  ) : null}
-                </div> */}
-            <div className="flex mt-3 self-end space-x-2">
-              {code !== "" ? (
-                <a href={code} target="_blank" rel="noopener noreferrer">
-                  <CodeIcon className="hover:text-primary w-6" />
-                </a>
-              ) : null}
-              {url !== "" ? (
-                <a href={url} target="_blank" rel="noopener noreferrer">
-                  <ExternalLinkIcon className="hover:text-primary w-6" />
-                </a>
-              ) : null}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="">
-        <Image src={images[0]} width={800} height={440} layout="responsive" />
-
-        {/* <Carousel images={images} /> */}
       </div>
     </div>
   );

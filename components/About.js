@@ -1,157 +1,104 @@
 import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiCsharp,
+  SiDotnet,
+  SiRuby,
+  SiRubyonrails,
+  SiFigma,
+  SiGit,
+  SiAdobexd,
+} from "react-icons/si";
+import { FiDatabase } from "react-icons/fi";
 
 function About() {
-  gsap.registerPlugin(ScrollTrigger);
-  let aboutMeTitle = useRef(null);
-  let aboutMeText = useRef(null);
-  let skillsTitle = useRef(null);
-  let skillsList = useRef(null);
-
-  useEffect(() => {
-    gsap.fromTo(
-      aboutMeTitle,
-      { opacity: 0, x: -50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: aboutMeTitle,
-        },
-      }
-    );
-    gsap.fromTo(
-      aboutMeText,
-      { opacity: 0, x: 50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: aboutMeText,
-        },
-      }
-    );
-    gsap.fromTo(
-      skillsTitle,
-      { opacity: 0, x: -50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: skillsTitle,
-        },
-      }
-    );
-    gsap.fromTo(
-      skillsList,
-      { opacity: 0, x: 50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: skillsList,
-        },
-      }
-    );
-  });
   return (
-    <div className="mx-5 md:pt-16 md:px-10 md:m-0" id="about">
-      <div className="flex flex-col md:flex-row w-full">
-        <div
-          className="pt-3 md:w-1/3 md:text-right md:mr-5"
-          ref={(el) => (aboutMeTitle = el)}
-        >
-          <h1>A LITTLE ABOUT ME</h1>
+    <div className="w-4/5 lg:w-3/5 mx-auto" id="about">
+      <div className="">
+        <div data-aos="fade-up">
+          <h1>A little bit about me</h1>
+          <div className="sectionUnderline"></div>
         </div>
-        <div
-          className="text-sm py-3 px-2 md:w-1/2 leading-6"
-          ref={(el) => (aboutMeText = el)}
-        >
-          <p>
-            A <mark>bilingual</mark> web developer with an aerospace engineering
-            degree now working as a full stack developer for a Japanese system
-            integration company. Born and raised in the &#127468;&#127463;{" "}
-            <mark>U.K.</mark> now living in &#127471;&#127477;<mark>Tokyo</mark>
-            .
-            <br />
-            <br />
-            During my degree I studied subjects ranging from aero propulsion to
-            project management. This allowed me to attain{" "}
-            <mark>technical knowledge</mark> and <mark>problem solving</mark>{" "}
-            skills as well as be educated on the life cycle of an engineering
-            project and the importance of management.
-            <br />
-            <br />
-            After graduation, I attended a coding bootcamp to gain industry
-            ready skills to start a career in web development I studied{" "}
-            <mark>graphic design</mark> at school and always had a keen eye for
-            aesthetics and fine detail. Now looking for opportunities to focus
-            on front end and learn more about
-            <mark> UI/UX</mark>. <br />
-            <br />
-            In my spare time I like to swing a golf club, walk 4 hours in a
-            field and make the odd birdie.{" "}
-            <span className="text-lg">
-              &#127948;&#65039;&#8205;&#9794;&#65039;
-            </span>
-          </p>
-        </div>
+        <p data-aos="fade-up" className="mb-4">
+          A <mark>bilingual</mark> web developer with an aerospace engineering
+          degree now working as a full stack developer for a Japanese system
+          integration company. Born and raised in the <mark>U.K.</mark>{" "}
+          &#127468;&#127463; now living in <mark>Tokyo</mark>{" "}
+          &#127471;&#127477;.
+          <br />
+          <br />
+          After graduating from university, the original plan was to pursue a
+          career in aviation but I decided to choose a different path. The tech
+          industry struck something in my heart and decided to become a software
+          engineer. Although my degree equipped me with a{" "}
+          <mark>technical background</mark>, I needed industry ready{" "}
+          <mark>web development skills</mark> so I attended a coding bootcamp.
+          <br />
+          <br />
+          Although learning the <mark>full stack</mark> was incredibly
+          insightful, I particularly enjoyed the <mark>frontend</mark> portion
+          of the curriculum. It reminded me of my interest in design and the
+          time when I studied <mark>graphic design</mark> at school. Now looking
+          for opportunities to focus on front end and learn more about
+          <mark> UI/UX</mark>. <br />
+          <br />
+          In my spare time I like to swing a golf club, walk 4 hours in a field
+          and make the odd birdie.{" "}
+          <span className="text-lg">
+            &#127948;&#65039;&#8205;&#9794;&#65039;
+          </span>
+        </p>
       </div>
-      <div className="flex flex-col md:flex-row w-full mt-10">
-        <div
-          className="pt-3 md:w-1/3 md:text-right md:mr-5"
-          ref={(el) => (skillsTitle = el)}
-        >
-          <h1>SOME OF MY SKILLS</h1>
+      <div className="mt-24 mb-4">
+        <div data-aos="fade-up">
+          <h1>Some of my skills</h1>
+          <div className="sectionUnderline"></div>
         </div>
-        <div className="text-sm py-3 md:w-1/2" ref={(el) => (skillsList = el)}>
-          <div className="flex justify-evenly leading-6">
-            <div className="">
-              <h3>FRONTEND</h3>
-              <div className="py-1">
-                <ul>
-                  <li>&gt; HTML</li>
-                  <li>&gt; CSS</li>
-                  <li>&gt; JavaScript</li>
-                  <li>&gt; React</li>
-                  <li>&gt; GSAP</li>
-                  <li>&gt; jQuery</li>
-                </ul>
-              </div>
-            </div>
-            <div className="">
-              <h3>BACKEND</h3>
-              <div className="py-1">
-                <ul>
-                  <li>&gt; C#</li>
-                  <li>&gt; .NET Core</li>
-                  <li>&gt; Ruby</li>
-                  <li>&gt; Rails</li>
-                </ul>
-              </div>
-            </div>
-            <div className="">
-              <h3>OTHER</h3>
-              <div className="py-1">
-                <ul>
-                  <li>&gt; Git</li>
-                  <li>&gt; SQL</li>
-                  <li>&gt; Design</li>
-                  <li>&gt; UI/UX</li>
-                </ul>
-              </div>
-            </div>
+        <div className="flex justify-between flex-wrap">
+          <div className="skillsGroup">
+            <h3>Frontend</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+            </ul>
+          </div>
+          <div className="skillsGroup">
+            <h3>Backend</h3>
+            <ul>
+              <li>C#</li>
+              <li>.NET Core</li>
+              <li>Ruby</li>
+              <li>Ruby on Rails</li>
+            </ul>
+          </div>
+          <div className="skillsGroup">
+            <h3>Other</h3>
+            <ul>
+              <li>Git</li>
+              <li>SQL</li>
+              <li>NEXT.js</li>
+              <li>Azure</li>
+            </ul>
+          </div>
+          <div className="skillsGroup">
+            <h3>Tools</h3>
+            <ul>
+              <li>Figma</li>
+              <li>Adobe XD</li>
+              <li>SSMS</li>
+              <li>Postman</li>
+            </ul>
           </div>
         </div>
       </div>
-      <div className="pt-5 justify-center flex">
+      <div data-aos="fade-up" className="pt-8 justify-center flex">
         <a href="/resume.pdf" download="Resume.pdf" className="primary-btn">
-          DOWNLOAD RESUME
+          Download resume
         </a>
       </div>
     </div>
