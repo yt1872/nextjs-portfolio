@@ -5,7 +5,6 @@ function Projects() {
   let projectsToRender;
   projectsToRender = projects.map((project, index) => {
     let props = { projectInfo: project, id: index };
-    // console.log(props);
     return <ProjectsSection {...props} />;
   });
 
@@ -16,10 +15,6 @@ function Projects() {
           <h1>Previous work</h1>
           <div className="sectionUnderline"></div>
         </div>
-        {/* <p>
-          Some of my previous projects and work. View the code or a live version
-          if available.
-        </p> */}
         <div className="">{projectsToRender}</div>
       </div>
     </div>

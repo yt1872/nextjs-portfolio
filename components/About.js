@@ -1,23 +1,8 @@
-import React, { useRef, useEffect } from "react";
-import {
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiReact,
-  SiCsharp,
-  SiDotnet,
-  SiRuby,
-  SiRubyonrails,
-  SiFigma,
-  SiGit,
-  SiAdobexd,
-} from "react-icons/si";
-import { FiDatabase } from "react-icons/fi";
+import React from "react";
 
 function About() {
   return (
     <div className="w-5/6 lg:w-3/5 mx-auto" id="about">
-      {/* <div className="h-full md:h-3/5 w-screen absolute left-0 mt-20 bg-cyan-600 -skew-y-6"></div> */}
       <div className="">
         <div>
           <h1>A little bit about me</h1>
@@ -58,7 +43,6 @@ function About() {
           <h1>Some of my skills</h1>
           <div className="sectionUnderline"></div>
         </div>
-        {/* <div className="flex justify-between flex-wrap"> */}
         <div className="grid gap-6 grid-cols-2 sm:grid-cols-4">
           <div className="skillsGroup">
             <h3>Frontend</h3>

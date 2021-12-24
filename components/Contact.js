@@ -5,7 +5,6 @@ import React, { useState } from "react";
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const handleModal = () => setSubmitted(!submitted);
-  // const showModal = () => setSubmitted(!submitted);
   const {
     register,
     handleSubmit,
@@ -39,7 +38,9 @@ function Contact() {
         <form onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off">
           <div className="mb-6">
             <div className="contact-form">
-              <label className="">Name</label>
+              <label className="">
+                Name <span className="text-red-500">*</span>
+              </label>
               <input
                 placeholder="John Smith"
                 required
@@ -65,7 +66,9 @@ function Contact() {
 
           <div className="mb-6">
             <div className="contact-form">
-              <label className="">Email</label>
+              <label className="">
+                Email <span className="text-red-500">*</span>
+              </label>
               <input
                 placeholder="johnsmith@mail.com"
                 required
@@ -98,7 +101,9 @@ function Contact() {
 
           <div className="mb-6">
             <div className="contact-form">
-              <label className="">Message</label>
+              <label className="">
+                Message <span className="text-red-500">*</span>
+              </label>
               <textarea
                 placeholder="Hello!"
                 required
@@ -129,7 +134,6 @@ function Contact() {
             )}
           </div>
           <input type="submit" className="primary-btn w-full" value="Submit" />
-          {/* <div onClick={handleModal}>test</div> */}
         </form>
       </div>
 

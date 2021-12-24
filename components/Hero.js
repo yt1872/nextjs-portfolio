@@ -1,6 +1,6 @@
 import Programmer from "./Programmer";
 import { Link } from "react-scroll";
-import React, { useRef, useEffect } from "react";
+import React from "react";
 
 function Hero() {
   return (

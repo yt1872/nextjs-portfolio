@@ -1,5 +1,4 @@
 import { FaGithub, FaLinkedin, FaCaretUp } from "react-icons/fa";
-import { IconContext } from "react-icons";
 import { animateScroll } from "react-scroll";
 
 function Footer() {
@@ -18,7 +17,7 @@ function Footer() {
           <div class="">©︎ 2021 All Rights Reserved</div>
           <div>Yuichiro Toyama</div>
         </div>
-        <div class="flex text-xl space-x-3">
+        <div class="flex space-x-3">
           <a
             href="https://github.com/yt1872"
             target="_blank"
@@ -36,12 +35,6 @@ function Footer() {
             <FaLinkedin className="hover:text-cyan-500 hover:dark:text-cyan-400 text-3xl" />
           </a>
         </div>
-        {/* <div className="">
-        <select className="bg-gray-800 tracking-wider font-light">
-          <option>ENGLISH</option>
-          <option>JAPANESE</option>
-        </select>
-      </div> */}
       </div>
     </div>
   );

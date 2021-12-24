@@ -35,7 +35,7 @@
   }
 
   .primary-btn {
-    @apply cursor-pointer shadow-lg shadow-cyan-500/50 hover:shadow-none hover:transform hover:translate-y-1 transition ease-in-out duration-200 bg-gradient-to-r from-cyan-500 to-teal-500 text-slate-100 text-sm px-4 py-3 rounded-md tracking-wider;
+    @apply cursor-pointer shadow-lg shadow-cyan-600/50 hover:shadow-none hover:transform hover:translate-y-1 transition ease-in-out duration-200 bg-gradient-to-r from-cyan-500 to-teal-500 text-slate-100 text-sm px-4 py-3 rounded-md tracking-wider;
   }
 
   .contact-form input,
@@ -55,17 +55,6 @@
     @apply mb-4 text-center;
   }
 
-  .embla {
-    overflow: hidden;
-  }
-  .embla__container {
-    display: flex;
-  }
-  .embla__slide {
-    position: relative;
-    flex: 0 0 100%;
-  }
-
   .previewLTR {
     @apply md:col-span-3 md:col-start-6 md:col-end-3 relative pt-[56.25%];
   }
@@ -75,7 +64,7 @@
   }
 
   .projectInfo {
-    @apply p-2;
+    @apply p-2 h-full items-center flex;
   }
 
   .infoRTL {

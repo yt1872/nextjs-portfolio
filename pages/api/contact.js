@@ -9,7 +9,7 @@ export default async (req, res) => {
     to: process.env.SENDGRID_TO,
     from: process.env.SENDGRID_FROM,
     subject: "Contact form submission",
-    html: `<p>You Have a new contact form submission</p><br>
+    html: `<p>You have a new contact form submission</p><br>
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Message:</strong> ${message}</p>`,
