@@ -10,12 +10,13 @@ const projectObjOne = {
   fontColor: "#FFF",
   bgColor: "#ff9682",
   stackColor: "#DD6C59",
+  video: "https://youtu.be/Qfd_S9Jh8Lc?t=3341",
 };
 
 const projectObjTwo = {
   projectName: "AirPaws",
   projectDesc:
-    "A website where puppy lovers can spend a day or two with the most adorable puppies from very generous owners. Built in 1 week during the team project section of a coding bootcamp. Scraping the internet for cute puppy pictures was a lot of fun.",
+    "A website where puppy lovers could rent the most adorable puppies from very generous owners. Built in 1 week during the team project section of a coding bootcamp. Scraping the internet for cute puppy pictures was a lot of fun.",
   projectTagline: "Rent a puppy platform",
   stack: ["Ruby", "Rails", "Sass"],
   images: ["/images/airpaws1.png", "/images/airpaws3.png"],
@@ -70,8 +71,7 @@ const projectObjFive = {
 
 export const projects = [
   projectObjOne,
+  projectObjFour,
   projectObjTwo,
   projectObjThree,
-  projectObjFour,
-  projectObjFive,
 ];

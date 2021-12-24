@@ -16,13 +16,14 @@ import { FiDatabase } from "react-icons/fi";
 
 function About() {
   return (
-    <div className="w-4/5 lg:w-3/5 mx-auto" id="about">
+    <div className="w-5/6 lg:w-3/5 mx-auto" id="about">
+      {/* <div className="h-full md:h-3/5 w-screen absolute left-0 mt-20 bg-cyan-600 -skew-y-6"></div> */}
       <div className="">
-        <div data-aos="fade-up">
+        <div>
           <h1>A little bit about me</h1>
           <div className="sectionUnderline"></div>
         </div>
-        <p data-aos="fade-up" className="mb-4">
+        <p className="mb-4">
           A <mark>bilingual</mark> web developer with an aerospace engineering
           degree now working as a full stack developer for a Japanese system
           integration company. Born and raised in the <mark>U.K.</mark>{" "}
@@ -38,11 +39,11 @@ function About() {
           <mark>web development skills</mark> so I attended a coding bootcamp.
           <br />
           <br />
-          Although learning the <mark>full stack</mark> was incredibly
-          insightful, I particularly enjoyed the <mark>frontend</mark> portion
-          of the curriculum. It reminded me of my interest in design and the
-          time when I studied <mark>graphic design</mark> at school. Now looking
-          for opportunities to focus on front end and learn more about
+          Although learning the <mark>full stack</mark> was incredibly valuable,
+          I particularly enjoyed the <mark>frontend</mark> portion of the
+          curriculum. It reminded me of my interest in design and the time when
+          I studied <mark>graphic design</mark> at school. Now looking for
+          opportunities to focus on frontend and learn more about
           <mark> UI/UX</mark>. <br />
           <br />
           In my spare time I like to swing a golf club, walk 4 hours in a field
@@ -52,12 +53,13 @@ function About() {
           </span>
         </p>
       </div>
-      <div className="mt-24 mb-4">
-        <div data-aos="fade-up">
+      <div className="mt-24 mb-4 relative">
+        <div>
           <h1>Some of my skills</h1>
           <div className="sectionUnderline"></div>
         </div>
-        <div className="flex justify-between flex-wrap">
+        {/* <div className="flex justify-between flex-wrap"> */}
+        <div className="grid gap-6 grid-cols-2 sm:grid-cols-4">
           <div className="skillsGroup">
             <h3>Frontend</h3>
             <ul>
@@ -71,7 +73,7 @@ function About() {
             <h3>Backend</h3>
             <ul>
               <li>C#</li>
-              <li>.NET Core</li>
+              <li>.NET</li>
               <li>Ruby</li>
               <li>Ruby on Rails</li>
             </ul>

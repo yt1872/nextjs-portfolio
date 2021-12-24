@@ -19,7 +19,7 @@
   }
 
   h1 {
-    @apply text-xl uppercase tracking-wider font-bold mb-2 text-center text-slate-900 dark:text-slate-200;
+    @apply text-xl tracking-wider font-bold mb-2 text-center text-slate-900 dark:text-slate-200;
   }
 
   h2 {
@@ -40,11 +40,7 @@
 
   .contact-form input,
   .contact-form textarea {
-    @apply w-full bg-slate-200 dark:bg-slate-800 appearance-none border-2 rounded-md p-2 focus:outline-none;
-  }
-
-  .skillsList {
-    @apply columns-2 text-center;
+    @apply w-full bg-slate-200 dark:bg-slate-800 appearance-none border-2 rounded-md px-2 py-3 focus:outline-none;
   }
 
   li {
@@ -56,6 +52,37 @@
   }
 
   .skillsGroup {
-    @apply w-2/5 sm:w-auto mb-4;
+    @apply mb-4 text-center;
+  }
+
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    position: relative;
+    flex: 0 0 100%;
+  }
+
+  .previewLTR {
+    @apply md:col-span-3 md:col-start-6 md:col-end-3 relative pt-[56.25%];
+  }
+
+  .previewRTL {
+    @apply md:col-span-3 md:col-start-1 md:col-end-4 relative pt-[56.25%];
+  }
+
+  .projectInfo {
+    @apply p-2;
+  }
+
+  .infoRTL {
+    @apply md:col-span-2 md:col-start-4;
+  }
+
+  .infoLTR {
+    @apply md:col-span-2 md:col-start-1 md:row-start-1;
   }
 }

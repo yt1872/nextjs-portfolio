@@ -6,13 +6,13 @@ function Hero() {
   return (
     <div
       id="home"
-      className="w-4/5 md:w-3/5 mx-auto flex flex-col lg:flex-row sm:items-center h-screen justify-center"
+      className="w-5/6 sm:w-4/6 lg:w-9/12 max-w-6xl min-h-[700px] mx-auto py-12 grid lg:gap-4 lg:grid-cols-6 grid-rows-2 lg:grid-rows-1 h-screen items-center"
     >
-      <div className="">
+      <div className="lg:col-span-4">
         <div
           data-aos="fade-up"
           data-aos-duration="500"
-          className="text-3xl lg:text-5xl font-bold text-slate-900 dark:text-slate-200 mb-4"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-200 mb-4"
         >
           Hi, I'm Yuichiro &#x1f44b;
         </div>
@@ -20,7 +20,7 @@ function Hero() {
           data-aos="fade-up"
           data-aos-delay="100"
           data-aos-duration="500"
-          className="mb-4 text-xl md:text-base lg:text-2xl"
+          className="mb-4 text-lg sm:text-xl md:text-2xl"
         >
           I'm a <mark className="hero-bold">Fullstack Developer</mark>, I design
           and build <mark className="hero-bold">interactive</mark> and{" "}
@@ -41,7 +41,7 @@ function Hero() {
         data-aos="fade-up"
         data-aos-delay="300"
         data-aos-duration="500"
-        className="w-4/5 mx-auto"
+        className="relative h-full lg:col-span-2"
       >
         <Programmer />
       </div>

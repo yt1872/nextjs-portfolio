@@ -1,36 +1,16 @@
 import React from "react";
 import { CodeIcon, ExternalLinkIcon } from "@heroicons/react/outline";
+import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/solid";
 import Image from "next/image";
+import ReactPlayer from "react-player";
 
-function ProjectsSection({
-  projectName,
-  projectDesc,
-  projectTagline,
-  stack,
-  images,
-  url,
-  code,
-  bgColor,
-  fontColor,
-  stackColor,
-}) {
-  let projectCard = {
-    backgroundColor: bgColor,
-    color: fontColor,
-  };
-
-  let stackPill = {
-    backgroundColor: stackColor,
-    color: fontColor,
-  };
-
+function ProjectsSection(props) {
   let itemsToRender;
-  if (stack) {
-    itemsToRender = stack.map((item) => {
+  if (props.projectInfo.stack) {
+    itemsToRender = props.projectInfo.stack.map((item) => {
       return (
         <p
-          className="text-xs rounded-md py-1 px-2 mr-2 mt-2"
-          style={stackPill}
+          className="text-xs dark:text-slate-100 rounded-md py-1 px-2 mr-2 mt-2 bg-slate-200 dark:bg-slate-700"
           key={item}
         >
           {item}
@@ -39,24 +19,50 @@ function ProjectsSection({
     });
   }
 
+  let imagesToRender;
+  if (props.projectInfo.images) {
+    imagesToRender = props.projectInfo.images.map((image) => {
+      return (
+        <div className="embla__slide h-[45vw]">
+          <Image src={image} layout="fill" objectFit="cover" />
+        </div>
+      );
+    });
+  }
+
   return (
     <div
+      key={props.id}
       data-aos="fade-up"
-      className="relative h-[50vw] md:h-[25vw] lg:h-[20vw]"
+      className="mb-4 md:mb-8 p-4 rounded-md bg-slate-200 dark:bg-slate-800 items-center grid gap-4 md:grid-cols-5"
     >
-      <Image
-        src={images[0]}
-        layout="fill"
-        objectFit="cover"
-        className="rounded-md absolute"
-        priority="true"
-      />
-      <div className="absolute flex items-center bg-slate-700 text-slate-200 w-full h-full opacity-0 hover:opacity-95 rounded-md transition ease-in-out duration-200">
-        <div className="w-2/3 mx-auto text-center">
-          <div className="mb-4">{projectTagline}</div>
-          <button className="primary-btn">Find out more</button>
-          {/* <div>{projectDesc}</div> */}
+      <div className={`${props.id % 2 ? "previewRTL" : "previewLTR"}`}>
+        {props.projectInfo.video ? (
+          <ReactPlayer
+            className="absolute top-0 left-0"
+            url="https://youtu.be/Qfd_S9Jh8Lc?t=3341"
+            width="100%"
+            height="100%"
+          />
+        ) : (
+          <Image
+            src={props.projectInfo.images[0]}
+            layout="fill"
+            objectFit="cover"
+            priority="true"
+          />
+        )}
+      </div>
+      <div
+        className={`${
+          props.id % 2 ? "infoRTL projectInfo" : "infoLTR projectInfo"
+        }`}
+      >
+        <div className="font-semibold text-cyan-400 mb-2">
+          {props.projectInfo.projectName}
         </div>
+        <div className="mb-2">{props.projectInfo.projectDesc}</div>
+        <div className="flex">{itemsToRender}</div>
       </div>
     </div>
   );

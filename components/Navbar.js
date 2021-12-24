@@ -1,6 +1,15 @@
 import { SunIcon, MoonIcon } from "@heroicons/react/outline";
 import { useState } from "react";
 import Switch from "@mui/material/Switch";
+// import { createTheme } from "@mui/material/styles";
+
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: "#06b6d4",
+//     },
+//   },
+// });
 
 function Navbar() {
   const [enabled, setEnabled] = useState(false);

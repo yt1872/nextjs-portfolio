@@ -30,18 +30,13 @@ function Contact() {
   }
 
   return (
-    <div id="contact" className="pt-24 w-4/5 md:w-3/5 lg:w-2/5 mx-auto">
+    <div id="contact" className="pt-24 w-5/6 md:w-3/5 lg:w-2/5 mx-auto">
       <div className="">
-        <div data-aos="fade-up">
+        <div>
           <h1>Contact</h1>
           <div className="sectionUnderline"></div>
         </div>
-        <form
-          data-aos="fade-up"
-          onSubmit={handleSubmit(onSubmit)}
-          noValidate
-          autoComplete="off"
-        >
+        <form onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off">
           <div className="mb-6">
             <div className="contact-form">
               <label className="">Name</label>
