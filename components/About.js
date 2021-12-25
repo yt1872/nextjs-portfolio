@@ -74,8 +74,8 @@ function About() {
           <div className="skillsGroup">
             <h3>Tools</h3>
             <ul>
+              <li>VS Code</li>
               <li>Figma</li>
-              <li>Adobe XD</li>
               <li>SSMS</li>
               <li>Postman</li>
             </ul>
