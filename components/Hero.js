@@ -1,8 +1,13 @@
 import Programmer from "./Programmer";
 import { Link } from "react-scroll";
 import React from "react";
+import { useRouter } from "next/router";
+import { en } from "../locales/en";
+import { ja } from "../locales/ja";
 
 function Hero() {
+  const router = useRouter();
+  const t = router.locale === "en" ? en : ja;
   return (
     <div
       id="home"
@@ -14,7 +19,7 @@ function Hero() {
           data-aos-duration="500"
           className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-200 mb-4"
         >
-          Hi, I'm Yuichiro &#x1f44b;
+          {t.Hi} &#x1f44b;
         </div>
         <div
           data-aos="fade-up"

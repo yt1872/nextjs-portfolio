@@ -74,4 +74,12 @@
   .infoLTR {
     @apply md:col-span-2 md:col-start-1 md:row-start-1;
   }
+
+  .navDropdown {
+    @apply py-1 absolute rounded-md bg-slate-50 dark:bg-slate-800 ring-1 ring-gray-900/10 shadow-lg;
+  }
+
+  .navDropdown li {
+    @apply flex items-center text-sm pl-2 pr-8 hover:bg-slate-300 dark:hover:bg-slate-700;
+  }
 }
