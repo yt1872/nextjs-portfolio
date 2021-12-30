@@ -1,8 +1,13 @@
 import { useForm } from "react-hook-form";
-import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/solid";
+import { FiX, FiCheckCircle } from "react-icons/fi";
 import React, { useState } from "react";
+import { useRouter } from "next/router";
+import { en } from "../locales/en";
+import { ja } from "../locales/ja";
 
 function Contact() {
+  const router = useRouter();
+  const t = router.locale === "en" ? en : ja;
   const [submitted, setSubmitted] = useState(false);
   const handleModal = () => setSubmitted(!submitted);
   const {
@@ -32,17 +37,17 @@ function Contact() {
     <div id="contact" className="pt-24 w-5/6 md:w-3/5 lg:w-2/5 mx-auto">
       <div className="">
         <div>
-          <h1>Contact</h1>
+          <h1>{t.contact}</h1>
           <div className="sectionUnderline"></div>
         </div>
         <form onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off">
           <div className="mb-6">
             <div className="contact-form">
               <label className="">
-                Name <span className="text-red-500">*</span>
+                {t.name} <span className="text-red-500">*</span>
               </label>
               <input
-                placeholder="John Smith"
+                placeholder={t.namePlaceHolder}
                 required
                 type="text"
                 name="name"
@@ -67,10 +72,10 @@ function Contact() {
           <div className="mb-6">
             <div className="contact-form">
               <label className="">
-                Email <span className="text-red-500">*</span>
+                {t.email} <span className="text-red-500">*</span>
               </label>
               <input
-                placeholder="johnsmith@mail.com"
+                placeholder={t.emailPlaceHolder}
                 required
                 type="text"
                 name="email"
@@ -102,10 +107,10 @@ function Contact() {
           <div className="mb-6">
             <div className="contact-form">
               <label className="">
-                Message <span className="text-red-500">*</span>
+                {t.message} <span className="text-red-500">*</span>
               </label>
               <textarea
-                placeholder="Hello!"
+                placeholder={t.messagePlaceHolder}
                 required
                 type="text"
                 rows={5}
@@ -133,31 +138,35 @@ function Contact() {
               </p>
             )}
           </div>
-          <input type="submit" className="primary-btn w-full" value="Submit" />
+          <input
+            type="submit"
+            className="primary-btn w-full"
+            value={t.submit}
+          />
         </form>
       </div>
 
       {submitted ? (
         <div
           onClick={handleModal}
-          className="cursor-pointer fixed z-50 h-screen w-screen bg-slate-600 dark:bg-slate-700 bg-opacity-95 dark:bg-opacity-95 top-0 left-0 px-4 flex flex-col items-center justify-center"
+          className="cursor-pointer fixed z-50 h-screen w-screen bg-slate-600 dark:bg-slate-700 bg-opacity-95 dark:bg-opacity-95 top-0 left-0 px-6 flex flex-col items-center justify-center"
         >
           <div
             data-aos="fade-up"
-            className="bg-slate-50 dark:bg-slate-800 w-full text-center rounded relative max-w-md"
+            className="bg-slate-50 dark:bg-slate-800 w-full text-center rounded relative max-w-lg px-4 cursor-default"
           >
-            <XCircleIcon
-              className="w-6 absolute right-2 top-2 cursor-pointer"
+            <FiX
+              className="text-2xl absolute right-2 top-2 cursor-pointer text-slate-500 hover:text-slate-900 hover:dark:text-slate-200"
               onClick={handleModal}
             />
-            <CheckCircleIcon className="text-green-500 dark:text-green-400 w-32 m-auto mt-6" />
-            <p className="text-green-400 font-semibold tracking-wider">
-              Submitted!
-            </p>
-            <div className="pt-4 mb-6">
-              Thanks for getting in touch! <br />I will get back to you as soon
-              as I can
+            <FiCheckCircle className="text-green-500 dark:text-green-400 w-24 h-24 m-auto mt-6" />
+            <div className="text-2xl font-semibold mt-4 text-slate-900 dark:text-slate-200">
+              {t.thanks}
             </div>
+            <div
+              className="pt-4 mb-6"
+              dangerouslySetInnerHTML={{ __html: t.reply }}
+            />
           </div>
         </div>
       ) : null}

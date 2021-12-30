@@ -1,10 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import { GoBrowser, GoFileCode } from "react-icons/go";
+import { useRouter } from "next/router";
 
 import ReactPlayer from "react-player";
 
 function ProjectsSection(props) {
+  console.log(props);
+  const router = useRouter();
+
   let itemsToRender;
   if (props.projectInfo.stack) {
     itemsToRender = props.projectInfo.stack.map((item) => {
@@ -62,8 +66,9 @@ function ProjectsSection(props) {
 
   return (
     <div
-      key={props.id}
+      key={props.id + props.projectInfo.projectName}
       data-aos="fade-up"
+      data-aos-duration="600"
       className="mb-4 md:mb-8 p-4 rounded-md bg-slate-200 dark:bg-slate-800 items-center grid gap-4 md:grid-cols-5"
     >
       <div className={`${props.id % 2 ? "previewRTL" : "previewLTR"}`}>
@@ -91,14 +96,20 @@ function ProjectsSection(props) {
         <div className="">
           <div className="flex justify-between">
             <div className="font-semibold text-cyan-500 dark:text-cyan-400 mb-2">
-              {props.projectInfo.projectName}
+              {router.locale === "en"
+                ? props.projectInfo.projectName
+                : props.projectInfo.projectNameJa}
             </div>
             <div className="flex space-x-1">
               {liveLink}
               {sourceCode}
             </div>
           </div>
-          <div className="mb-2">{props.projectInfo.projectDesc}</div>
+          <div className="mb-2">
+            {router.locale === "en"
+              ? props.projectInfo.projectDesc
+              : props.projectInfo.projectDescJa}
+          </div>
           <div className="flex mb-2 space-x-2">{itemsToRender}</div>
         </div>
       </div>

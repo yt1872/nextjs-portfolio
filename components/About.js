@@ -1,51 +1,38 @@
 import React from "react";
+import { useRouter } from "next/router";
+import { en } from "../locales/en";
+import { ja } from "../locales/ja";
 
 function About() {
+  const router = useRouter();
+  const t = router.locale === "en" ? en : ja;
   return (
     <div className="w-5/6 lg:w-3/5 mx-auto" id="about">
       <div className="">
         <div>
-          <h1>A little bit about me</h1>
+          <h1>{t.aboutTitle}</h1>
           <div className="sectionUnderline"></div>
         </div>
-        <p className="mb-4">
-          A <mark>bilingual</mark> web developer with an aerospace engineering
-          degree now working as a full stack developer for a Japanese system
-          integration company. Born and raised in the <mark>U.K.</mark>{" "}
-          &#127468;&#127463; now living in <mark>Tokyo</mark>{" "}
-          &#127471;&#127477;.
+        <div className="mb-4">
+          <div dangerouslySetInnerHTML={{ __html: t.about1 }} />
           <br />
           <br />
-          After graduating from university, the original plan was to pursue a
-          career in aviation but I decided to choose a different path. The tech
-          industry struck something in my heart and decided to become a software
-          engineer. Although my degree equipped me with a{" "}
-          <mark>technical background</mark>, I needed industry ready{" "}
-          <mark>web development skills</mark> so I attended a coding bootcamp.
+          <div dangerouslySetInnerHTML={{ __html: t.about2 }} />
           <br />
           <br />
-          Although learning the <mark>full stack</mark> was incredibly valuable,
-          I particularly enjoyed the <mark>frontend</mark> portion of the
-          curriculum. It reminded me of my interest in design and the time when
-          I studied <mark>graphic design</mark> at school. Now looking for
-          opportunities to focus on frontend and learn more about
-          <mark> UI/UX</mark>. <br />
+          <div dangerouslySetInnerHTML={{ __html: t.about3 }} />
           <br />
-          In my spare time I like to swing a golf club, walk 4 hours in a field
-          and make the odd birdie.{" "}
-          <span className="text-lg">
-            &#127948;&#65039;&#8205;&#9794;&#65039;
-          </span>
-        </p>
+          <div dangerouslySetInnerHTML={{ __html: t.about4 }} />
+        </div>
       </div>
       <div className="mt-24 mb-4 relative">
         <div>
-          <h1>Some of my skills</h1>
+          <h1>{t.skillsTitle}</h1>
           <div className="sectionUnderline"></div>
         </div>
         <div className="grid gap-6 grid-cols-2 sm:grid-cols-4">
           <div className="skillsGroup">
-            <h3>Frontend</h3>
+            <h3>{t.frontend}</h3>
             <ul>
               <li>HTML</li>
               <li>CSS</li>
@@ -54,7 +41,7 @@ function About() {
             </ul>
           </div>
           <div className="skillsGroup">
-            <h3>Backend</h3>
+            <h3>{t.backend}</h3>
             <ul>
               <li>C#</li>
               <li>.NET</li>
@@ -63,7 +50,7 @@ function About() {
             </ul>
           </div>
           <div className="skillsGroup">
-            <h3>Other</h3>
+            <h3>{t.other}</h3>
             <ul>
               <li>Git</li>
               <li>SQL</li>
@@ -72,7 +59,7 @@ function About() {
             </ul>
           </div>
           <div className="skillsGroup">
-            <h3>Tools</h3>
+            <h3>{t.tools}</h3>
             <ul>
               <li>VS Code</li>
               <li>Figma</li>
@@ -82,9 +69,13 @@ function About() {
           </div>
         </div>
       </div>
-      <div data-aos="fade-up" className="pt-8 justify-center flex">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="600"
+        className="pt-8 justify-center flex"
+      >
         <a href="/resume.pdf" download="Resume.pdf" className="primary-btn">
-          Download resume
+          {t.downloadResume}
         </a>
       </div>
     </div>

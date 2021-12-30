@@ -16,36 +16,35 @@ function Hero() {
       <div className="lg:col-span-4">
         <div
           data-aos="fade-up"
-          data-aos-duration="500"
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-200 mb-4"
-        >
-          {t.Hi} &#x1f44b;
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-duration="500"
+          data-aos-delay="200"
+          data-aos-duration="600"
           className="mb-4 text-lg sm:text-xl md:text-2xl"
         >
-          I'm a <mark className="hero-bold">Fullstack Developer</mark>, I design
-          and build <mark className="hero-bold">interactive</mark> and{" "}
-          <mark className="hero-bold">responsive</mark> websites.
+          {t.hi} &#x1f44b;
         </div>
+
+        <div
+          dangerouslySetInnerHTML={{ __html: t.intro }}
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-aos-duration="600"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-200 mb-8"
+        />
         <div
           data-aos="fade-up"
-          data-aos-delay="200"
-          data-aos-duration="500"
+          data-aos-delay="600"
+          data-aos-duration="600"
           className="flex"
         >
           <Link to="contact" className="primary-btn" smooth={true}>
-            Get In Touch
+            {t.CTA}
           </Link>
         </div>
       </div>
       <div
         data-aos="fade-up"
-        data-aos-delay="300"
-        data-aos-duration="500"
+        data-aos-delay="800"
+        data-aos-duration="600"
         className="relative h-full lg:col-span-2"
       >
         <Programmer />
