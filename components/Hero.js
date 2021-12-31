@@ -18,7 +18,7 @@ function Hero() {
           data-aos="fade-up"
           data-aos-delay="200"
           data-aos-duration="600"
-          className="mb-4 text-lg sm:text-xl md:text-2xl text-right"
+          className="mb-4 text-lg sm:text-xl md:text-2xl lg:text-right"
         >
           {t.hi} &#x1f44b;
         </div>
@@ -28,13 +28,13 @@ function Hero() {
           data-aos="fade-up"
           data-aos-delay="400"
           data-aos-duration="600"
-          className=" text-right text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-200 mb-8"
+          className=" lg:text-right text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-200 mb-8"
         />
         <div
           data-aos="fade-up"
           data-aos-delay="600"
           data-aos-duration="600"
-          className="w-full text-right"
+          className="w-full lg:text-right"
         >
           <Link to="contact" className="primary-btn" smooth={true}>
             {t.CTA}
