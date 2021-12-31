@@ -15,7 +15,7 @@ function Projects() {
   });
 
   return (
-    <div className="w-11/12 lg:w-9/12 mx-auto mt-24" id="works">
+    <div className="w-11/12 lg:w-9/12 max-w-6xl mx-auto mt-24" id="works">
       <h1>{t.previousWork}</h1>
       <div className="sectionUnderline"></div>
       {projectsToRender}

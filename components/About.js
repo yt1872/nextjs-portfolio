@@ -7,7 +7,7 @@ function About() {
   const router = useRouter();
   const t = router.locale === "en" ? en : ja;
   return (
-    <div className="w-5/6 lg:w-3/5 mx-auto" id="about">
+    <div className="w-5/6 lg:w-3/5 mx-auto max-w-6xl" id="about">
       <div className="">
         <div>
           <h1>{t.aboutTitle}</h1>

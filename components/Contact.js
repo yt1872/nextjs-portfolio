@@ -34,7 +34,7 @@ function Contact() {
   }
 
   return (
-    <div id="contact" className="pt-24 w-5/6 md:w-3/5 lg:w-2/5 mx-auto">
+    <div id="contact" className="pt-24 w-5/6 md:w-3/5 mx-auto max-w-5xl">
       <div className="">
         <div>
           <h1>{t.contact}</h1>
