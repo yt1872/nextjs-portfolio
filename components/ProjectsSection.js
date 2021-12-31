@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 import ReactPlayer from "react-player";
 
 function ProjectsSection(props) {
-  console.log(props);
   const router = useRouter();
 
   let itemsToRender;
@@ -14,22 +13,11 @@ function ProjectsSection(props) {
     itemsToRender = props.projectInfo.stack.map((item) => {
       return (
         <p
-          className="text-xs dark:text-slate-100 rounded-md py-1 px-2 bg-slate-50 dark:bg-slate-700"
+          className="text-xs dark:text-slate-100 rounded-md py-1 px-2 mr-2 mb-2 bg-slate-50 dark:bg-slate-700"
           key={item}
         >
           {item}
         </p>
-      );
-    });
-  }
-
-  let imagesToRender;
-  if (props.projectInfo.images) {
-    imagesToRender = props.projectInfo.images.map((image) => {
-      return (
-        <div className="embla__slide h-[45vw]">
-          <Image src={image} layout="fill" objectFit="cover" />
-        </div>
       );
     });
   }
@@ -66,7 +54,6 @@ function ProjectsSection(props) {
 
   return (
     <div
-      key={props.id + props.projectInfo.projectName}
       data-aos="fade-up"
       data-aos-duration="600"
       className="mb-4 md:mb-8 p-4 rounded-md bg-slate-200 dark:bg-slate-800 items-center grid gap-4 md:grid-cols-5"
@@ -75,7 +62,7 @@ function ProjectsSection(props) {
         {props.projectInfo.video ? (
           <ReactPlayer
             className="absolute top-0 left-0"
-            url="https://youtu.be/Qfd_S9Jh8Lc?t=3341"
+            url={props.projectInfo.video}
             width="100%"
             height="100%"
           />
@@ -83,7 +70,7 @@ function ProjectsSection(props) {
           <Image
             src={props.projectInfo.images[0]}
             layout="fill"
-            objectFit="cover"
+            objectFit="contain"
             priority="true"
           />
         )}
@@ -93,7 +80,7 @@ function ProjectsSection(props) {
           props.id % 2 ? "infoRTL projectInfo" : "infoLTR projectInfo"
         }`}
       >
-        <div className="">
+        <div>
           <div className="flex justify-between">
             <div className="font-semibold text-cyan-500 dark:text-cyan-400 mb-2">
               {router.locale === "en"
@@ -110,7 +97,7 @@ function ProjectsSection(props) {
               ? props.projectInfo.projectDesc
               : props.projectInfo.projectDescJa}
           </div>
-          <div className="flex mb-2 space-x-2">{itemsToRender}</div>
+          <div className="flex flex-wrap">{itemsToRender}</div>
         </div>
       </div>
     </div>

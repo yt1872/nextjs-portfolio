@@ -22,7 +22,7 @@
   }
 
   h3 {
-    @apply font-bold uppercase tracking-wider text-cyan-500 dark:text-cyan-400;
+    @apply uppercase tracking-widest text-cyan-500 dark:text-cyan-400;
   }
 
   strong {

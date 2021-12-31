@@ -11,7 +11,7 @@ function Projects() {
   let projectsToRender;
   projectsToRender = projects.map((project, index) => {
     let props = { projectInfo: project, id: index };
-    return <ProjectsSection {...props} />;
+    return <ProjectsSection {...props} key={index} />;
   });
 
   return (
