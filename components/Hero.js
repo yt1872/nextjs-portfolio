@@ -11,14 +11,14 @@ function Hero() {
   return (
     <div
       id="home"
-      className="w-5/6 sm:w-4/6 lg:w-9/12 max-w-6xl min-h-[700px] mx-auto py-12 grid lg:gap-4 lg:grid-cols-6 grid-rows-2 lg:grid-rows-1 h-screen items-center"
+      className="relative w-5/6 sm:w-4/6 lg:w-9/12 max-w-6xl min-h-[700px] mx-auto py-12 grid lg:gap-4 lg:grid-cols-6 grid-rows-2 lg:grid-rows-1 h-screen items-center"
     >
       <div className="lg:col-span-4">
         <div
           data-aos="fade-up"
           data-aos-delay="200"
           data-aos-duration="600"
-          className="mb-4 text-lg sm:text-xl md:text-2xl lg:text-right"
+          className="mb-4 text-lg sm:text-xl md:text-2xl lg:text-right z-0"
         >
           {t.hi} &#x1f44b;
         </div>
@@ -34,9 +34,13 @@ function Hero() {
           data-aos="fade-up"
           data-aos-delay="600"
           data-aos-duration="600"
-          className="w-full lg:text-right"
+          className="w-full lg:text-right relative"
         >
-          <Link to="contact" className="primary-btn" smooth={true}>
+          <Link
+            to="contact"
+            className="primary-btn absolute top-0 right-0"
+            smooth={true}
+          >
             {t.CTA}
           </Link>
         </div>
@@ -45,7 +49,7 @@ function Hero() {
         data-aos="fade-up"
         data-aos-delay="800"
         data-aos-duration="600"
-        className="relative h-full lg:col-span-2"
+        className="relative h-4/5 md:h-full lg:col-span-2"
       >
         <Programmer />
       </div>

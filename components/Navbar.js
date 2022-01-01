@@ -64,7 +64,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="mr-8 mt-8 relative"
+      className="mr-8 mt-8 relative z-10"
       data-aos="fade-in"
       data-aos-duration="600"
     >
