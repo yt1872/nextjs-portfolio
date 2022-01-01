@@ -28,17 +28,17 @@ function Hero() {
           data-aos="fade-up"
           data-aos-delay="400"
           data-aos-duration="600"
-          className=" lg:text-right text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-200 mb-8"
+          className="lg:text-right text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-200 mb-4"
         />
         <div
           data-aos="fade-up"
           data-aos-delay="600"
           data-aos-duration="600"
-          className="w-full lg:text-right relative"
+          className="w-full relative"
         >
           <Link
             to="contact"
-            className="primary-btn absolute top-0 right-0"
+            className="primary-btn absolute lg:right-0"
             smooth={true}
           >
             {t.CTA}
