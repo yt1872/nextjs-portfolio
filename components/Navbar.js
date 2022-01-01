@@ -38,6 +38,8 @@ const Navbar = () => {
   if (!mounted) return null;
 
   const renderThemeButton = () => {
+    console.log(theme);
+    console.log(systemTheme);
     if (theme === "system" && systemTheme === "light") {
       return (
         <FiSun className="hover:text-cyan-500 hover:dark:text-cyan-400 text-3xl" />
@@ -52,7 +54,7 @@ const Navbar = () => {
       );
     } else if (theme === "dark") {
       return (
-        <FiSun className="hover:text-cyan-500 hover:dark:text-cyan-400 text-3xl" />
+        <FiMoon className="hover:text-cyan-500 hover:dark:text-cyan-400 text-3xl" />
       );
     }
   };
