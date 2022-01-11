@@ -75,6 +75,6 @@
   }
 
   .navDropdown li {
-    @apply flex items-center cursor-pointer text-sm pl-2 pr-8 hover:bg-slate-300 dark:hover:bg-slate-700;
+    @apply flex items-center cursor-pointer pl-3 pr-8 py-2 hover:bg-slate-300 dark:hover:bg-slate-700;
   }
 }

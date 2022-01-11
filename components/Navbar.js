@@ -38,8 +38,6 @@ const Navbar = () => {
   if (!mounted) return null;
 
   const renderThemeButton = () => {
-    console.log(theme);
-    console.log(systemTheme);
     if (theme === "system" && systemTheme === "light") {
       return (
         <FiSun className="hover:text-cyan-500 hover:dark:text-cyan-400 text-3xl" />
@@ -104,14 +102,16 @@ const Navbar = () => {
       ) : null}
       {showLang ? (
         <ul className="navDropdown top-10 right-10" ref={refLang}>
-          <Link href="/" locale="en" onClick={() => setShowLang(!showLang)}>
-            <li>
-              <span className="text-xl">🇬🇧</span> English
+          <Link href="/" locale="en">
+            <li onClick={() => setShowLang(!showLang)}>
+              <img src="./images/uk.png" className="w-4 mr-2"></img>
+              English
             </li>
           </Link>
-          <Link href="/" locale="ja" onClick={() => setShowLang(!showLang)}>
-            <li>
-              <span className="text-xl">🇯🇵</span> 日本語
+          <Link href="/" locale="ja" onClick={() => setShowLang(false)}>
+            <li onClick={() => setShowLang(!showLang)}>
+              <img src="./images/japan.png" className="w-4 mr-2"></img>
+              日本語
             </li>
           </Link>
         </ul>
