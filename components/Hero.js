@@ -20,7 +20,7 @@ function Hero() {
           data-aos-duration="600"
           className="mb-4 text-lg sm:text-xl md:text-2xl lg:text-right z-0"
         >
-          {t.hi} &#x1f44b;
+          {t.hi} 👋
         </div>
 
         <div

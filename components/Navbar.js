@@ -70,6 +70,7 @@ const Navbar = () => {
       data-aos="fade-in"
       data-aos-duration="600"
     >
+      <span class="fi fi-gr"></span>
       <button
         type="button"
         className="absolute right-0 rounded-md"
@@ -104,10 +105,14 @@ const Navbar = () => {
       {showLang ? (
         <ul className="navDropdown top-10 right-10" ref={refLang}>
           <Link href="/" locale="en" onClick={() => setShowLang(!showLang)}>
-            <li>English</li>
+            <li>
+              <span className="text-xl">🇬🇧</span> English
+            </li>
           </Link>
           <Link href="/" locale="ja" onClick={() => setShowLang(!showLang)}>
-            <li>Japanese</li>
+            <li>
+              <span className="text-xl">🇯🇵</span> 日本語
+            </li>
           </Link>
         </ul>
       ) : null}
