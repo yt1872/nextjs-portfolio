@@ -29,4 +29,9 @@ export const ja = {
   submit: "送信",
   thanks: "お問い合わせありがとうございます！",
   reply: "返信まで今しばらくお待ちください",
+  errorName: "名前を入力してください",
+  errorEmail: "メールアドレスを入力してください",
+  errorInvalidEmail: "メールアドレスではありません",
+  errorMessage: "本文を入力してください",
+  errorLength: "500文字が上限です",
 };

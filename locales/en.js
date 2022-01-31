@@ -29,4 +29,9 @@ export const en = {
   submit: "Submit",
   thanks: "Thanks for getting in touch!",
   reply: "I will get back to you as soon as I can",
+  errorName: "Please enter your name",
+  errorEmail: "Please enter your email",
+  errorInvalidEmail: "Invalid email address",
+  errorMessage: "Please enter a message",
+  errorLength: "Max length is 500 characters",
 };

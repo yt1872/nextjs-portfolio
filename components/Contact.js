@@ -59,7 +59,7 @@ function Contact() {
                 {...register("name", {
                   required: {
                     value: true,
-                    message: "Please enter your name",
+                    message: t.errorName,
                   },
                 })}
               />
@@ -87,12 +87,12 @@ function Contact() {
                 {...register("email", {
                   required: {
                     value: true,
-                    message: "Please enter your email",
+                    message: t.errorEmail,
                   },
                   pattern: {
                     value:
                       /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                    message: "Invalid email address",
+                    message: t.errorInvalidEmail,
                   },
                 })}
               />
@@ -123,11 +123,11 @@ function Contact() {
                 {...register("message", {
                   required: {
                     value: true,
-                    message: "Please enter a message",
+                    message: t.errorMessage,
                   },
                   maxLength: {
                     value: 500,
-                    message: "Max length is 500 characters",
+                    message: t.errorLength,
                   },
                 })}
               />

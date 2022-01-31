@@ -30,8 +30,9 @@ function ProjectsSection(props) {
         href={props.projectInfo.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="cursor-pointer hover:text-cyan-500 hover:dark:text-cyan-400"
+        className="cursor-pointer hover:text-cyan-500 hover:dark:text-cyan-400 flex mr-4 mb-2"
       >
+        <span className="mr-2">Visit the website</span>
         <GoBrowser className="text-2xl" />
       </a>
     );
@@ -45,8 +46,9 @@ function ProjectsSection(props) {
         href={props.projectInfo.code}
         target="_blank"
         rel="noopener noreferrer"
-        className="cursor-pointer hover:text-cyan-500 hover:dark:text-cyan-400"
+        className="cursor-pointer hover:text-cyan-500 hover:dark:text-cyan-400 flex"
       >
+        <span className="mr-2">See the code</span>
         <GoFileCode className="text-2xl" />
       </a>
     );
@@ -87,17 +89,17 @@ function ProjectsSection(props) {
                 ? props.projectInfo.projectName
                 : props.projectInfo.projectNameJa}
             </div>
-            <div className="flex space-x-1">
-              {liveLink}
-              {sourceCode}
-            </div>
           </div>
           <div className="mb-2">
             {router.locale === "en"
               ? props.projectInfo.projectDesc
               : props.projectInfo.projectDescJa}
           </div>
-          <div className="flex flex-wrap">{itemsToRender}</div>
+          <div className="flex flex-wrap mb-2">{itemsToRender}</div>
+          <div className="flex flex-wrap">
+            {liveLink}
+            {sourceCode}
+          </div>
         </div>
       </div>
     </div>
