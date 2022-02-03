@@ -82,20 +82,18 @@ function ProjectsSection(props) {
           props.id % 2 ? "infoRTL projectInfo" : "infoLTR projectInfo"
         }`}
       >
-        <div>
-          <div className="flex justify-between">
-            <div className="font-semibold text-cyan-500 dark:text-cyan-400 mb-2">
-              {router.locale === "en"
-                ? props.projectInfo.projectName
-                : props.projectInfo.projectNameJa}
-            </div>
+        <div className="flex-col space-y-4">
+          <div className="text-lg font-semibold text-cyan-500 dark:text-cyan-400">
+            {router.locale === "en"
+              ? props.projectInfo.projectName
+              : props.projectInfo.projectNameJa}
           </div>
-          <div className="mb-2">
+          <div className="">
             {router.locale === "en"
               ? props.projectInfo.projectDesc
               : props.projectInfo.projectDescJa}
           </div>
-          <div className="flex flex-wrap mb-2">{itemsToRender}</div>
+          <div className="flex flex-wrap">{itemsToRender}</div>
           <div className="flex flex-wrap">
             {liveLink}
             {sourceCode}
