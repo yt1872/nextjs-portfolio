@@ -15,7 +15,7 @@ Built using NEXT.js and Tailwind CSS for styling alongside packages such as Send
 yarn
 ```
 
-3. Start development starter
+3. Start development server
 
 ```sh
 yarn dev
