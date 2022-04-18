@@ -2,11 +2,13 @@ import React from "react";
 import Image from "next/image";
 import { GoBrowser, GoFileCode } from "react-icons/go";
 import { useRouter } from "next/router";
-
 import ReactPlayer from "react-player";
+import { en } from "../locales/en";
+import { ja } from "../locales/ja";
 
 function ProjectsSection(props) {
   const router = useRouter();
+  const t = router.locale === "en" ? en : ja;
 
   let itemsToRender;
   if (props.projectInfo.stack) {
@@ -32,7 +34,7 @@ function ProjectsSection(props) {
         rel="noopener noreferrer"
         className="cursor-pointer hover:text-cyan-500 hover:dark:text-cyan-400 flex mr-4 mb-2"
       >
-        <span className="mr-2">Visit the website</span>
+        <span className="mr-2">{t.visitPage}</span>
         <GoBrowser className="text-2xl" />
       </a>
     );
@@ -48,7 +50,7 @@ function ProjectsSection(props) {
         rel="noopener noreferrer"
         className="cursor-pointer hover:text-cyan-500 hover:dark:text-cyan-400 flex"
       >
-        <span className="mr-2">See the code</span>
+        <span className="mr-2">{t.seeCode}</span>
         <GoFileCode className="text-2xl" />
       </a>
     );

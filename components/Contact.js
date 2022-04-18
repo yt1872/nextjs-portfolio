@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { FiX, FiCheckCircle } from "react-icons/fi";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { en } from "../locales/en";
 import { ja } from "../locales/ja";
@@ -9,12 +9,18 @@ function Contact() {
   const router = useRouter();
   const t = router.locale === "en" ? en : ja;
   const [submitted, setSubmitted] = useState(false);
+  const contactForm = useRef(null);
   const handleModal = () => setSubmitted(!submitted);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  // useEffect(() => {
+  //   console.log(errors);
+  //   contactForm.current.focus();
+  // }, [t]);
 
   async function onSubmit(values) {
     fetch("/api/contact", {

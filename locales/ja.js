@@ -34,4 +34,6 @@ export const ja = {
   errorInvalidEmail: "メールアドレスではありません",
   errorMessage: "本文を入力してください",
   errorLength: "500文字が上限です",
+  visitPage: "サイトへ移動",
+  seeCode: "ソースコードを参照",
 };

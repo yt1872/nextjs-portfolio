@@ -34,4 +34,6 @@ export const en = {
   errorInvalidEmail: "Invalid email address",
   errorMessage: "Please enter a message",
   errorLength: "Max length is 500 characters",
+  visitPage: "Visit the website",
+  seeCode: "See the code",
 };
