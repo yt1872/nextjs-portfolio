@@ -9,6 +9,7 @@ function Contact() {
   const router = useRouter();
   const t = router.locale === "en" ? en : ja;
   const [submitted, setSubmitted] = useState(false);
+  const [renderCount, setRenderCount] = useState(1);
   const contactForm = useRef(null);
   const handleModal = () => setSubmitted(!submitted);
   const {
@@ -17,10 +18,13 @@ function Contact() {
     formState: { errors },
   } = useForm();
 
-  // useEffect(() => {
-  //   console.log(errors);
-  //   contactForm.current.focus();
-  // }, [t]);
+  useEffect(() => {
+    setRenderCount(renderCount + 1);
+    if (renderCount > 1) {
+      console.log("gvhgv");
+      contactForm.current.click();
+    }
+  }, [t]);
 
   async function onSubmit(values) {
     fetch("/api/contact", {
@@ -148,6 +152,7 @@ function Contact() {
             type="submit"
             className="primary-btn w-full"
             value={t.submit}
+            ref={contactForm}
           />
         </form>
       </div>
