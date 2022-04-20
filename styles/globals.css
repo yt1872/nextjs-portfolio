@@ -26,7 +26,7 @@
   }
 
   strong {
-    @apply font-semibold text-cyan-500 dark:text-cyan-400 not-italic bg-transparent;
+    @apply font-semibold bg-gradient-to-r from-cyan-500 to-teal-500 text-transparent bg-clip-text not-italic bg-transparent;
   }
 
   .primary-btn {

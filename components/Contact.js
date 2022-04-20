@@ -19,9 +19,9 @@ function Contact() {
   } = useForm();
 
   useEffect(() => {
+    const isErrorsEmpty = Object.keys(errors).length === 0;
     setRenderCount(renderCount + 1);
-    if (renderCount > 1) {
-      console.log("gvhgv");
+    if (renderCount > 1 && !isErrorsEmpty) {
       contactForm.current.click();
     }
   }, [t]);
